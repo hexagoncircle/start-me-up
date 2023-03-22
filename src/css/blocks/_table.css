@@ -14,7 +14,7 @@ figure:has(table) {
   border-radius: var(--radius-s);
   background-color: var(--table-bg);
   overscroll-behavior-x: contain;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 :where(table) {

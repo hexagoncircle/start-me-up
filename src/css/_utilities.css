@@ -26,10 +26,10 @@
 }
 
 .scroll-block {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .scroll-inline {
   overscroll-behavior-x: contain;
-  overflow-x: scroll;
+  overflow-x: auto;
 }

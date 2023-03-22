@@ -39,7 +39,7 @@ input:required + label:after {
   ) {
   appearance: none;
   padding: var(--input-padding);
-  width: 100%;
+  inline-size: 100%;
   border: var(--input-border-width) var(--input-border-style)
     var(--input-border-color);
   background-color: var(--input-bg);
@@ -50,7 +50,7 @@ input:required + label:after {
       var(--input-border-width) * 2
   );
   box-shadow: var(--input-shadow);
-  display: block;
+  display: flex;
 }
 
 select {

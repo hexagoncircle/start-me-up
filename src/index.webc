@@ -67,16 +67,28 @@ layout: "page"
       />
     </div>
 
-    <!-- Date-->
-    <div class="input-stack">
-      <label for="date">Date</label>
-      <input type="date" id="date" name="date" />
+    <div class="inline-wrap">
+      <!-- Date-->
+      <div class="input-stack" style="flex: 1 0 225px">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <!-- Time-->
+      <div class="input-stack" style="flex: 1 0 125px">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" />
+      </div>
     </div>
 
-    <!-- Time-->
     <div class="input-stack">
-      <label for="time">Time</label>
-      <input type="time" id="time" name="time" />
+      <label for="datetime">Date & time</label>
+      <input
+        id="datetime"
+        type="datetime-local"
+        name="datetime"
+        value="2023-11-23T20:30"
+      />
     </div>
 
     <!-- Color-->
