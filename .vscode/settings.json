@@ -13,7 +13,7 @@
   },
   // Hide files from the sidebar to keep things tidy
   "files.exclude": {
-    "node_modules/": false,
+    "node_modules/": true,
     "package-lock.json": true
   }
 }
