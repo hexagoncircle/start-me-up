@@ -231,12 +231,29 @@ layout: "page"
     </div>
 
     <!-- Buttons -->
-    <h3>Button variants</h3>
+    <h3 style="--stack-space: var(--space-l)">Button variants</h3>
     <div class="inline-wrap">
-      <button>Default</button>
-      <button data-variant="primary">Primary</button>
-      <button data-variant="secondary">Secondary</button>
-      <button data-variant="dashed">Dashed</button>
+      <button onclick="event.preventDefault()">Default</button>
+      <button data-variant="primary" onclick="event.preventDefault()">
+        Primary
+      </button>
+      <button data-variant="secondary" onclick="event.preventDefault()">
+        Secondary
+      </button>
+      <button data-variant="dashed" onclick="event.preventDefault()">
+        Dashed
+      </button>
+      <button onclick="event.preventDefault()">
+        <inline-svg aria-hidden="true" src="public/icons/menu.svg"></inline-svg>
+        <span>Hamburgers</span>
+      </button>
+      <button data-variant="primary" onclick="event.preventDefault()">
+        <span>Search this page</span>
+        <inline-svg
+          aria-hidden="true"
+          src="public/icons/search.svg"
+        ></inline-svg>
+      </button>
     </div>
   </section>
 </form>
