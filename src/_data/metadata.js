@@ -5,5 +5,4 @@ module.exports = {
   description: "Base styles and utilities for new projects",
   language: "en",
   ogImage: "",
-  version: "0.0.1",
 };
