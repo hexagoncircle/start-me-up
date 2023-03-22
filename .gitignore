@@ -5,7 +5,7 @@ node_modules/
 .DS_Store
 
 # Site output
-dist
+_site
 
 # Local Netlify folder
 netlify
