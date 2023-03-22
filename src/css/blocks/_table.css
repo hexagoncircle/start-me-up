@@ -6,6 +6,7 @@
   --table-bg-alt: var(--color-bg-1);
   --table-text-align: start;
   --table-cell-min-inline-size: 125px;
+  --table-header-min-inline-size: var(--table-cell-min-inline-size);
   --table-layout: initial;
 }
 
@@ -31,6 +32,14 @@ th,
 td {
   padding: var(--space-s);
   text-align: var(--table-text-align);
+}
+
+th {
+  min-inline-size: var(--table-header-min-inline-size);
+}
+
+td {
+  min-inline-size: var(--table-cell-min-inline-size);
 }
 
 :where(table:not([role="grid"])) {

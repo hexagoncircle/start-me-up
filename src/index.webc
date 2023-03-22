@@ -265,36 +265,36 @@ layout: "page"
       <thead>
         <tr>
           <th scope="col"></th>
-          <th scope="col">Column one</th>
-          <th scope="col">Column two</th>
-          <th scope="col">Column three</th>
-          <th scope="col">Column four</th>
+          <th scope="col">Bronze</th>
+          <th scope="col">Silver</th>
+          <th scope="col">Gold</th>
+          <th scope="col">Platinum</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Row one</th>
+          <th scope="row">Feature one</th>
           <td>✅</td>
           <td>✅</td>
           <td>✅</td>
           <td>✅</td>
         </tr>
         <tr>
-          <th scope="row">Row two</th>
+          <th scope="row">Feature two</th>
           <td></td>
           <td>✅</td>
           <td>✅</td>
           <td>✅</td>
         </tr>
         <tr>
-          <th scope="row">Row three</th>
+          <th scope="row">Feature three</th>
           <td></td>
           <td></td>
           <td>✅</td>
           <td>✅</td>
         </tr>
         <tr>
-          <th scope="row">Row four</th>
+          <th scope="row">Feature four</th>
           <td></td>
           <td></td>
           <td></td>
@@ -303,11 +303,11 @@ layout: "page"
       </tbody>
       <tfoot>
         <tr>
-          <th scope="col"></th>
-          <td scope="col">Total one</td>
-          <td scope="col">Total two</td>
-          <td scope="col">Total three</td>
-          <td scope="col">Total four</td>
+          <th scope="col">Total features</th>
+          <td scope="col">1</td>
+          <td scope="col">2</td>
+          <td scope="col">3</td>
+          <td scope="col">4</td>
         </tr>
       </tfoot>
     </table>
@@ -315,44 +315,39 @@ layout: "page"
 
   <h3 style="--stack-space: var(--space-l)">Table with row striping</h3>
   <figure>
-    <table role="grid">
+    <table role="grid" style="--table-cell-min-inline-size: 225px">
       <thead>
         <tr>
           <th scope="col"></th>
-          <th scope="col">Column one</th>
-          <th scope="col">Column two</th>
-          <th scope="col">Column three</th>
-          <th scope="col">Column four</th>
+          <th scope="col">Everyday</th>
+          <th scope="col">Seasonal</th>
+          <th scope="col">Specialty</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Row one</th>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
+          <th scope="row">Starters</th>
+          <td>Butter croissant</td>
+          <td>Chocolate cake</td>
+          <td>Sugar bonbon</td>
         </tr>
         <tr>
-          <th scope="row">Row two</th>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
+          <th scope="row">Main course</th>
+          <td>Rainbow macaron</td>
+          <td>Carrot cake</td>
+          <td>Apple pie biscuit</td>
         </tr>
         <tr>
-          <th scope="row">Row three</th>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
+          <th scope="row">Dessert</th>
+          <td>Powedered donut</td>
+          <td>Sugar plum cake</td>
+          <td>Gingerbread cookie</td>
         </tr>
         <tr>
-          <th scope="row">Row four</th>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
-          <td>Table cell</td>
+          <th scope="row">Dessert+</th>
+          <td>Sesame snaps</td>
+          <td>Cotton candy croissant</td>
+          <td>Sweet jelly ice cream</td>
         </tr>
       </tbody>
     </table>
