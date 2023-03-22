@@ -1,0 +1,76 @@
+:where(html) {
+  color-scheme: light;
+  --color-brand-1: dodgerblue;
+  --color-brand-2: hotpink;
+  --color-bg-0: white;
+  --color-bg-1: #f5f5f5;
+  --color-bg-2: #e0e0e0;
+  --color-bg-3: #d1d1d1;
+  --color-text-1: black;
+  --color-text-2: darkgray;
+  --color-text-inverse-1: white;
+  --color-text-inverse-2: whitesmoke;
+  --color-bg-disabled: #ededed;
+  --color-bg-invalid: #fdd5d5;
+  --color-bg-success: #d2f6d4;
+  --color-border-disabled: gray;
+  --color-border-invalid: red;
+  --color-border-success: green;
+  --color-text-disabled: gray;
+  --color-text-invalid: red;
+  --color-text-success: green;
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(html:not([data-theme-preference])) {
+    color-scheme: dark;
+    --color-brand-1: hotpink;
+    --color-brand-2: dodgerblue;
+    --color-bg-0: black;
+    --color-bg-1: #0f0f0f;
+    --color-bg-2: #1f1f1f;
+    --color-bg-3: #2e2e2e;
+    --color-text-1: white;
+    --color-text-2: whitesmoke;
+    --color-text-inverse-1: black;
+    --color-text-inverse-2: darkgray;
+  }
+}
+
+:where([data-theme-preference="dark"]) {
+  color-scheme: dark;
+  --color-brand-1: hotpink;
+  --color-brand-2: dodgerblue;
+  --color-bg-0: black;
+  --color-bg-1: #0f0f0f;
+  --color-bg-2: #1f1f1f;
+  --color-bg-3: #2e2e2e;
+  --color-text-1: white;
+  --color-text-2: whitesmoke;
+  --color-text-inverse-1: black;
+  --color-text-inverse-2: darkgray;
+}
+
+html {
+  scrollbar-color: hotpink Canvas;
+}
+
+:root {
+  accent-color: var(--color-brand-1);
+}
+
+:focus-visible {
+  outline-color: var(--color-brand-1);
+}
+
+::marker {
+  color: var(--color-brand-1);
+}
+
+:-webkit-any() {
+  color: var(--color-brand-1);
+}
+
+:is() {
+  color: var(--color-brand-1);
+}

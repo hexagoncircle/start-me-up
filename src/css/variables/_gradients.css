@@ -1,0 +1,4 @@
+:where(html) {
+  --gradient-1: linear-gradient(to left, #30c8c9, #183dd1);
+  --gradient-1-alt: linear-gradient(to right, #30c8c9, #183dd1);
+}

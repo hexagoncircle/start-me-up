@@ -1,0 +1,66 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+pre,
+code {
+  margin: 0;
+}
+
+:where(ul[role="list"]),
+:where(ol[role="list"]) {
+  padding: 0;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}

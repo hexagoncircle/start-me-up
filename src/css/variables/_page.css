@@ -1,0 +1,7 @@
+:where(html) {
+  --page-padding: clamp(var(--space-s), 5vw, var(--space-l));
+  --page-max-inline-size: 1200px;
+
+  --focus-outline: 5px auto -webkit-focus-ring-color;
+  --focus-outline-offset: 0.2em;
+}

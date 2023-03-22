@@ -1,0 +1,179 @@
+:where(html) {
+  --input-border-color: var(--color-bg-3);
+  --input-border-style: solid;
+  --input-border-width: 1px;
+  --input-bg: var(--color-bg-0);
+  --input-bg-checked: var(--color-brand-1);
+  --input-color-icon: var(--color-bg-3);
+  --input-color-icon-checked: var(--color-bg-0);
+  --input-color-text: currentcolor;
+  --input-padding: var(--space-xs);
+  --input-shadow: var(--shadow-light);
+}
+
+input:-webkit-autofill {
+  font: inherit;
+}
+
+input:autofill {
+  font: inherit;
+}
+
+label:has(+ input:required):after,
+input:required + label:after {
+  content: "*";
+  color: var(--color-text-invalid);
+}
+
+:where(
+    input:not(
+        [type="checkbox"],
+        [type="radio"],
+        [type="range"],
+        [type="submit"],
+        [type="reset"]
+      ),
+    select,
+    textarea
+  ) {
+  appearance: none;
+  padding: var(--input-padding);
+  width: 100%;
+  border: var(--input-border-width) var(--input-border-style)
+    var(--input-border-color);
+  background-color: var(--input-bg);
+  border-radius: var(--radius-xs);
+  color: var(--input-color-text);
+  min-block-size: calc(
+    1rem * var(--font-line-height) + var(--input-padding) * 2 +
+      var(--input-border-width) * 2
+  );
+  box-shadow: var(--input-shadow);
+  display: block;
+}
+
+select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+}
+
+fieldset {
+  --inline-wrap-row-gap: var(--space-2xs);
+  border: 0;
+  margin-inline: 0;
+  padding: 0;
+}
+
+legend {
+  max-width: 100%;
+  color: inherit;
+  white-space: normal;
+  padding: 0;
+  display: block;
+}
+
+label {
+  display: inline-block;
+}
+
+:where(input, textarea, select)[aria-invalid="false"] {
+  --input-border-color: var(--color-border-success);
+  --input-color-text: var(--color-text-success);
+
+  & + * {
+    color: var(--color-text-success);
+  }
+}
+
+:where(input, textarea, select)[aria-invalid="true"] {
+  --input-border-color: var(--color-border-invalid);
+  --input-color-text: var(--color-text-invalid);
+
+  & + * {
+    color: var(--color-text-invalid);
+  }
+}
+
+:where(input, textarea, select)[disabled] {
+  --input-border-color: var(--color-bg-2);
+  --input-bg: var(--color-bg-2);
+  --input-color-text: var(--color-text-disabled);
+  --input-shadow: none;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  --size: 1em;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  outline-offset: var(--focus-outline-offset);
+  inline-size: var(--size);
+  block-size: var(--size);
+  flex-shrink: 0;
+  margin: 0;
+}
+
+input[type="checkbox"]:not([role="switch"]),
+input[type="radio"] {
+  border: var(--input-border-width) var(--input-border-style)
+    var(--input-border-color);
+  background-color: var(--input-bg);
+  border-radius: var(--radius-xs);
+  color: var(--input-color-text);
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  overflow: hidden;
+}
+
+input[type="checkbox"]:not([role="switch"])::before,
+input[type="radio"]:before {
+  --offset: 4px;
+  content: "";
+  inline-size: calc(100% - var(--offset));
+  block-size: calc(100% - var(--offset));
+  background-color: var(--input-color-icon-checked);
+  opacity: 0;
+  transition: transform 0.2s var(--ease-out);
+}
+
+input[type="checkbox"]:not([role="switch"])::before {
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: translateY(100%);
+}
+
+input[type="checkbox"]:not([role="switch"]):checked {
+  --input-bg: var(--input-bg-checked);
+  --input-border-color: var(--input-bg-checked);
+}
+
+input[type="checkbox"]:not([role="switch"]):checked::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+input[type="radio"] {
+  border-radius: var(--radius-circle);
+}
+
+input[type="radio"]::before {
+  border-radius: inherit;
+  background-color: var(--input-bg-checked);
+  transform: scale(0);
+}
+
+input[type="radio"]:checked {
+  --input-border-color: var(--input-bg-checked);
+}
+
+input[type="radio"]:checked::before {
+  opacity: 1;
+  transform: scale(1);
+}

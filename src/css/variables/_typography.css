@@ -1,0 +1,20 @@
+:where(html) {
+  --font-family-primary: system-ui, -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu, Cantarell, “Helvetica Neue”, Arial,
+    sans-serif;
+  --font-family-secondary: sans-serif;
+  --font-family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  --font-line-height: 1.5;
+
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --font-size--2: clamp(0.72rem, calc(0.8rem + -0.11vw), 0.78rem);
+  --font-size--1: clamp(0.9rem, calc(0.95rem + -0.07vw), 0.94rem);
+  --font-size-0: clamp(1.13rem, calc(1.13rem + 0vw), 1.13rem);
+  --font-size-1: clamp(1.35rem, calc(1.33rem + 0.1vw), 1.41rem);
+  --font-size-2: clamp(1.62rem, calc(1.57rem + 0.24vw), 1.76rem);
+  --font-size-3: clamp(1.94rem, calc(1.86rem + 0.44vw), 2.2rem);
+  --font-size-4: clamp(2.33rem, calc(2.19rem + 0.72vw), 2.75rem);
+  --font-size-5: clamp(2.8rem, calc(2.58rem + 1.1vw), 3.43rem);
+}

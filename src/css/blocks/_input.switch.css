@@ -1,0 +1,43 @@
+input[type="checkbox"][role="switch"] {
+  --size: 1.25em;
+  --offset: calc(var(--input-border-width) * 4);
+  -webkit-appearance: none;
+  appearance: none;
+  outline-offset: var(--focus-outline-offset);
+  padding-inline: calc(var(--offset) / 1.5);
+  width: calc(var(--size) * 2);
+  background-color: var(--input-border-color);
+  border: var(--input-border-width) var(--input-border-style)
+    var(--input-border-color);
+  border-radius: var(--radius-pill);
+  align-items: center;
+  display: grid;
+  position: relative;
+  top: 0.0675em;
+}
+
+input[type="checkbox"][role="switch"]:before {
+  content: "";
+  width: calc(var(--size) - var(--offset) * 2);
+  height: calc(var(--size) - var(--offset) * 2);
+  border-radius: var(--radius-circle);
+  box-shadow: var(--shadow-light);
+  background-color: #fff;
+  display: block;
+}
+
+input[type="checkbox"][role="switch"]:checked {
+  border-color: var(--color-brand-1);
+  background-color: var(--color-brand-1);
+}
+
+input[type="checkbox"][role="switch"]:checked:before {
+  -webkit-transform: translateX(var(--size));
+  transform: translateX(var(--size));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  input[type="checkbox"][role="switch"]:before {
+    transition: transform 0.2s var(--ease-out);
+  }
+}

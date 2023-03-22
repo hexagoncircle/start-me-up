@@ -1,0 +1,46 @@
+<button id="theme-toggle" class="button" data-variant="primary" aria-label="auto">Toggle site theme</button>
+
+<script webc:keep>
+  const toggle = document.querySelector("#theme-toggle");
+  const storageKey = "theme-preference";
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const onClick = () => {
+    theme.value = theme.value === "light" ? "dark" : "light";
+    setPreference();
+  };
+
+  const getColorPreference = () => {
+    if (localStorage.getItem(storageKey)) {
+      return localStorage.getItem(storageKey);
+    }
+
+    return prefersDark.matches ? "dark" : "light";
+  };
+
+  const setPreference = () => {
+    localStorage.setItem(storageKey, theme.value);
+    reflectPreference();
+  };
+
+  const reflectPreference = () => {
+    document.firstElementChild.setAttribute(`data-${storageKey}`, theme.value);
+    toggle?.setAttribute("aria-label", theme.value);
+  };
+
+  const theme = {
+    value: getColorPreference(),
+  };
+
+  reflectPreference();
+
+  window.onload = () => {
+    reflectPreference();
+    toggle.addEventListener("click", onClick);
+  };
+
+  prefersDark.addEventListener("change", ({ matches: isDark }) => {
+    theme.value = isDark ? "dark" : "light";
+    setPreference();
+  });
+</script>

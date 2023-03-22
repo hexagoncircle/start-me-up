@@ -1,0 +1,75 @@
+input[type="file"] {
+  padding: unset;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+}
+
+input[type="file"]:focus-visible::-webkit-file-upload-button {
+  outline: var(--focus-outline);
+  outline-offset: 0;
+}
+
+input[type="file"]:focus-visible::file-selector-button {
+  outline: var(--focus-outline);
+  outline-offset: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  --button-bg-color: var(--color-brand-1);
+  --button-border-color: var(--color-brand-1);
+  --button-text-color: var(--color-text-inverse-1);
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  outline: revert;
+  outline-offset: var(--focus-outline-offset);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-s);
+  font: inherit;
+  text-align: center;
+  color: var(--button-text-color, var(--color-text-1));
+  background-color: var(--button-bg-color, var(--color-bg-1));
+  border: var(--button-border-width, 1px) var(--button-border-style, solid)
+    var(--button-border-color, currentcolor);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-light);
+  line-height: normal;
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+}
+
+input[type="file"]::-webkit-file-upload-button:active {
+  top: 1px;
+}
+
+input[type="file"]::file-selector-button {
+  --button-bg-color: var(--color-brand-1);
+  --button-border-color: var(--color-brand-1);
+  --button-text-color: var(--color-text-inverse-1);
+}
+
+input[type="file"]::file-selector-button {
+  outline: revert;
+  outline-offset: var(--focus-outline-offset);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-s);
+  font: inherit;
+  text-align: center;
+  color: var(--button-text-color, var(--color-text-1));
+  background-color: var(--button-bg-color, var(--color-bg-1));
+  border: var(--button-border-width, 1px) var(--button-border-style, solid)
+    var(--button-border-color, currentcolor);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-light);
+  line-height: normal;
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+}
+
+input[type="file"]::file-selector-button:active {
+  top: 1px;
+}

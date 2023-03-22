@@ -1,0 +1,82 @@
+@mixin button {
+  & {
+    outline: revert;
+    outline-offset: var(--focus-outline-offset);
+    cursor: pointer;
+    padding: var(--space-xs) var(--space-s);
+    font: inherit;
+    text-align: center;
+    color: var(--button-text-color, var(--color-text-1));
+    background-color: var(--button-bg-color, var(--color-bg-1));
+    border: var(--button-border-width, 1px) var(--button-border-style, solid)
+      var(--button-border-color, currentcolor);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-light);
+    line-height: normal;
+    text-decoration: none;
+    display: inline-flex;
+    position: relative;
+  }
+
+  &:active {
+    top: 1px;
+  }
+}
+
+:is(button, input[type="submit"], input[type="reset"], .button) {
+  @apply button;
+}
+
+:where(
+    button,
+    [type="submit"],
+    [type="reset"],
+    .button
+  )[data-variant="primary"] {
+  --button-bg-color: var(--color-brand-1);
+  --button-border-color: var(--color-brand-1);
+  --button-text-color: var(--color-text-inverse-1);
+}
+
+:where(
+    button,
+    [type="submit"],
+    [type="reset"],
+    .button
+  )[data-variant="secondary"] {
+  --button-bg-color: var(--color-brand-2);
+  --button-border-color: var(--color-brand-2);
+  --button-text-color: var(--color-text-inverse-1);
+}
+
+:where(
+    button,
+    [type="submit"],
+    [type="reset"],
+    .button
+  )[data-variant="dashed"] {
+  --button-border-style: dashed;
+}
+
+.icon-button {
+  --size: 1.25em;
+  all: unset;
+  outline: revert;
+  aspect-ratio: 1;
+  background-color: var(--color-bg-1);
+  border-radius: var(--radius-circle);
+  align-items: center;
+  justify-items: center;
+  padding: 0;
+  display: grid;
+}
+
+.icon-button svg {
+  width: var(--size);
+  height: var(--size);
+}
+
+[data-group="actions"] {
+  justify-content: space-between;
+  display: flex;
+}

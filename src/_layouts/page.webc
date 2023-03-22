@@ -1,0 +1,39 @@
+---
+layout: base
+---
+
+<header class="page-header breakout">
+  <p class="inline-max">
+    <small>start-me-up</small>
+    <small
+      >version: <code @text="process.env.npm_package_version"></code
+    ></small>
+  </p>
+</header>
+<main class="page-content" @raw="content"></main>
+<footer class="page-footer">
+  <div class="inline-max">
+    <small>Made with ❤️ in 2023 by Ryan Mulligan</small>
+  </div>
+</footer>
+
+<style>
+  .page-header {
+    padding-block: var(--space-s);
+    margin-block-end: var(--space-l);
+    border-block-end: 1px solid var(--color-bg-2);
+  }
+
+  .page-header p {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer {
+    border-block-start: 1px solid var(--color-bg-2);
+    margin-block-start: var(--space-2xl);
+    padding-block: var(--space-s) var(--space-m);
+    font-size: var(--font--1);
+    text-align: center;
+  }
+</style>

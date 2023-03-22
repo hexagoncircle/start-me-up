@@ -1,0 +1,32 @@
+<p>Hello world! <span>👋</span></p>
+
+<style webc:scoped>
+  :host {
+    display: inline-flex;
+    margin-block: var(--space-s);
+    padding: var(--space-2xs) var(--space-m);
+    color: var(--text-success);
+    background: var(--surface-success-1);
+    border: 1px solid var(--surface-success-2);
+    border-radius: var(--radius-pill);
+  }
+
+  :host span {
+    display: inline-flex;
+    transform-origin: bottom right;
+    animation: wobble 200ms linear alternate infinite;
+  }
+
+  @keyframes wobble {
+    from {
+      transform: rotate(-5deg);
+    }
+    to {
+      transform: rotate(5deg);
+    }
+  }
+</style>
+
+<script>
+  console.log("Hello, world!");
+</script>

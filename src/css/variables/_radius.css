@@ -1,0 +1,8 @@
+:where(html) {
+  --radius-xs: 0.125rem;
+  --radius-s: 0.25rem;
+  --radius-m: 0.5rem;
+  --radius-l: 1rem;
+  --radius-circle: 50%;
+  --radius-pill: 360px;
+}

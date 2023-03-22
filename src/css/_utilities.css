@@ -1,0 +1,35 @@
+.gradient-text {
+  background: var(--gradient-text-bg, var(--gradient-1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  white-space: nowrap;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.resize-block {
+  resize: vertical;
+}
+
+.resize-inline {
+  resize: horizontal;
+}
+
+.scroll-block {
+  overflow-y: scroll;
+}
+
+.scroll-inline {
+  overscroll-behavior-x: contain;
+  overflow-x: scroll;
+}

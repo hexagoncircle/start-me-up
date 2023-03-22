@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page information -->
+    <title>Examples | start-me-up</title>
+    <meta name="description" content="Base styles and utilities for new projects">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="apple-mobile-web-app-title" content="start-me-up">
+    <meta name="application-name" content="start-me-up">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:url" content="http://localhost:8080">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Examples | start-me-up">
+    <meta property="og:description" content="Base styles and utilities for new projects">
+    <meta property="og:image" content="http://localhost:8080">
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://localhost:8080">
+    <meta name="twitter:title" content="Examples | start-me-up">
+    <meta name="twitter:description" content="Base styles and utilities for new projects">
+    <meta name="twitter:image" content="http://localhost:8080">
+
+    <link rel="stylesheet" href="/css/global.css">
+    <style>.page-header{padding-block:var(--space-s);border-bottom:1px solid var(--color-bg-2);margin-bottom:var(--space-l)}.page-header p{justify-content:space-between;display:flex}.page-footer{border-top:1px solid var(--color-bg-2);padding-block:var(--space-s)var(--space-m);font-size:var(--font--1);text-align:center;margin-top:var(--space-2xl)}</style>
+    <script>document.addEventListener("DOMContentLoaded", async () => {
+    const res = await fetch("/.netlify/functions/render-webc/", {
+      method: "POST",
+      body: `<blog-post @title="I am a title"></blog-post>`,
+    });
+
+    const compiled = await res.json();
+
+    document.querySelector("#blog-post").innerHTML = compiled.html;
+
+    const styles = document.createElement("style");
+    styles.innerHTML = compiled.css;
+
+    document.body.appendChild(styles);
+  });</script>
+  </head>
+  <body class="pancake-stack">
+    <header class="page-header breakout">
+  <p class="inline-max">
+    <small>start-me-up</small>
+    <small>version: <code>0.0.1</code></small>
+  </p>
+</header>
+<main class="page-content"><div id="blog-post"></div>
+
+
+</main>
+<footer class="page-footer">
+  <div class="inline-max">
+    <small>Made with ❤️ in 2023 by Ryan Mulligan</small>
+  </div>
+</footer>
+
+
+
+    <script></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+input[type="range"] {
+  --range-thumb-size: 1rem;
+  --range-thumb-offset: -6px;
+  --range-track-height: calc(var(--range-thumb-size) / 4);
+  --range-color-bg: var(--color-brand-1);
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  padding-block: calc(var(--range-thumb-size) / 2);
+  background-color: transparent;
+  margin-inline: 0;
+  display: block;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--range-color-bg);
+  height: var(--range-track-height);
+  border: unset;
+  border-radius: var(--range-thumb-radius, var(--radius-pill));
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: var(--range-color-bg);
+  height: var(--range-track-height);
+  border: unset;
+  border-radius: var(--range-thumb-radius, var(--radius-pill));
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  top: var(--range-thumb-offset);
+  inline-size: var(--range-thumb-size);
+  block-size: var(--range-thumb-size);
+  background-color: var(--range-color-bg);
+  border-radius: var(--range-track-radius, var(--radius-pill));
+  box-shadow: var(--color-bg-1) 0 0 0 3px;
+  cursor: grab;
+  border: none;
+  position: relative;
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  top: var(--range-thumb-offset);
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background-color: var(--range-color-bg);
+  border-radius: var(--range-track-radius, var(--radius-pill));
+  box-shadow: var(--color-bg-1) 0 0 0 3px;
+  cursor: grab;
+  border: none;
+  position: relative;
+}
+
+input[type="range"]:focus-visible {
+  outline: none;
+}
+
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: var(--focus-outline);
+}
+
+input[type="range"]:focus-visible::-moz-range-thumb {
+  outline: var(--focus-outline);
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  cursor: grabbing;
+}

@@ -1,0 +1,79 @@
+.breakout {
+  --full: minmax(var(--page-padding), 1fr);
+  --content: min(
+    var(--max-inline-size, var(--page-max-inline-size)),
+    100% - var(--page-padding) * 2
+  );
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+
+  display: grid;
+  place-content: start;
+  grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+
+.breakout > * {
+  grid-column: content;
+}
+
+.breakout .popout {
+  grid-column: popout;
+}
+
+.breakout .feature {
+  grid-column: feature;
+}
+
+.breakout .full {
+  grid-column: full;
+}
+
+.pancake-stack {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack-space, var(--space-m));
+}
+
+.stack[data-type="flex"] {
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.inline-max {
+  width: min(var(--max-inline-size, var(--page-max-inline-size)), 100%);
+  margin-inline: auto;
+}
+
+.inline-wrap {
+  column-gap: var(--inline-wrap-column-gap, var(--space-s));
+  row-gap: var(--inline-wrap-row-gap, var(--space-s));
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.block-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--block-wrap-gap, var(--space-s));
+}
+
+.input-group {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: baseline;
+}
+
+.section + .section {
+  margin-block: var(--space-l);
+}

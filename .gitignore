@@ -1,0 +1,11 @@
+# The abyss
+node_modules/
+
+# macOS specific
+.DS_Store
+
+# Site output
+dist
+
+# Local Netlify folder
+netlify

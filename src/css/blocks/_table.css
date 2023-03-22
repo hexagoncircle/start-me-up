@@ -1,0 +1,57 @@
+:where(html) {
+  --table-border-width: 1px;
+  --table-border-color: var(--color-bg-2);
+  --table-border-style: solid;
+  --table-bg: var(--color-bg-0);
+  --table-bg-alt: var(--color-bg-1);
+  --table-text-align: start;
+  --table-cell-min-inline-size: 125px;
+  --table-layout: initial;
+}
+
+figure:has(table) {
+  box-shadow: var(--shadow-light);
+  border-radius: var(--radius-s);
+  background-color: var(--table-bg);
+  overscroll-behavior-x: contain;
+  overflow-x: scroll;
+}
+
+:where(table) {
+  inline-size: 100%;
+  border-spacing: 0;
+  text-indent: 0;
+  border: var(--table-border-width) var(--table-border-style)
+    var(--table-border-color);
+  border-radius: inherit;
+  table-layout: var(--table-layout);
+}
+
+th,
+td {
+  padding: var(--space-s);
+  text-align: var(--table-text-align);
+}
+
+:where(table:not([role="grid"])) {
+  & th,
+  & td {
+    border-block-end: var(--table-border-width) var(--table-border-style)
+      var(--table-border-color);
+  }
+}
+
+tfoot th,
+tfoot td {
+  border-block-end: unset;
+}
+
+:where(table:not([role="grid"])) td {
+  min-inline-size: var(--table-cell-min-inline-size);
+  border-inline-start: var(--table-border-width) var(--table-border-style)
+    var(--table-border-color);
+}
+
+table[role="grid"] tbody tr:nth-child(2n + 1) {
+  background-color: var(--table-bg-alt);
+}

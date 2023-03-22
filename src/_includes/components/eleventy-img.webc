@@ -1,0 +1,23 @@
+<script webc:type="render" webc:is="template">
+  const Image = require("@11ty/eleventy-img");
+
+  module.exports = async function () {
+    const meta = await Image(this.src, {
+      widths: [400, 800, 1280],
+      formats: ["avif", "webp", "jpeg"],
+      outputDir: "./dist/images",
+      urlPath: "/images",
+    });
+
+    const attrs = {
+      alt: this.alt,
+      class: this.class,
+      sizes: "100vw",
+      loading: this.loading || "lazy",
+      decoding: "async",
+      "webc:raw": true,
+    };
+
+    return Image.generateHTML(meta, attrs);
+  };
+</script>

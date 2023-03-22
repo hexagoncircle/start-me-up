@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html :lang="metadata.language">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page information -->
+    <title @text="metadataPageTitle(title)"></title>
+    <meta name="description" :content="metadata.description" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta name="apple-mobile-web-app-title" :content="metadata.siteName" />
+    <meta name="application-name" :content="metadata.siteName" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:url" :content="metadata.url" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" :content="metadataPageTitle(title)" />
+    <meta property="og:description" :content="metadata.description" />
+    <meta property="og:image" :content="metadataOGImage(ogImage)" />
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" :content="metadata.url" />
+    <meta name="twitter:title" :content="metadataPageTitle(title)" />
+    <meta name="twitter:description" :content="metadata.description" />
+    <meta name="twitter:image" :content="metadataOGImage(ogImage)" />
+
+    <link webc:keep rel="stylesheet" href="/css/global.css" />
+    <style @raw="getCss(page.url)" webc:keep></style>
+    <script @raw="getJs(page.url)" webc:keep></script>
+  </head>
+  <body class="pancake-stack">
+    <div @raw="content" webc:nokeep></div>
+    <script @raw="getJs(page.url, 'defer')" webc:keep></script>
+  </body>
+</html>
