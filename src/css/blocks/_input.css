@@ -23,6 +23,7 @@ label:has(+ input:required):after,
 input:required + label:after {
   content: "*";
   color: var(--color-text-invalid);
+  margin-inline-start: var(--space-2xs);
 }
 
 :where(
