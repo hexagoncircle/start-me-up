@@ -4,6 +4,7 @@
   "description": "Base styles and utilities for new projects",
   "main": "index.js",
   "scripts": {
+    "build": "eleventy",
     "start": "eleventy --serve",
     "clean": "rm -rf _site"
   },
