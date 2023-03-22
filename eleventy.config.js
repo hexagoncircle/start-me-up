@@ -9,7 +9,7 @@ const lightningCssConfig = require("./utils/lightning-css-config");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginWebc, {
-    components: "src/_includes/components/**/*.webc",
+    components: "src/_includes/**/*.webc",
   });
 
   eleventyConfig.addPlugin(pluginBundle, {
