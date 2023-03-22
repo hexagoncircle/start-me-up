@@ -74,6 +74,11 @@
   align-items: baseline;
 }
 
+.input-stack {
+  display: grid;
+  gap: var(--space-2xs);
+}
+
 .section + .section {
   margin-block: var(--space-l);
 }

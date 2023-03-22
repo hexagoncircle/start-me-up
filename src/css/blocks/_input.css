@@ -68,10 +68,13 @@ fieldset {
   border: 0;
   margin-inline: 0;
   padding: 0;
+  display: grid;
+  gap: var(--space-2xs);
 }
 
 legend {
   max-width: 100%;
+  margin-block-end: var(--space-s);
   color: inherit;
   white-space: normal;
   padding: 0;

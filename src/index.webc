@@ -7,7 +7,7 @@ layout: "page"
 
   <section class="section stack">
     <!-- Text -->
-    <div>
+    <div class="input-stack">
       <label for="text">Text</label>
       <input
         type="text"
@@ -21,13 +21,13 @@ layout: "page"
     </div>
 
     <!-- Required input -->
-    <div>
+    <div class="input-stack">
       <label for="text">Required input</label>
       <input required type="text" id="text" name="text" />
     </div>
 
     <!-- Textarea -->
-    <div>
+    <div class="input-stack">
       <label for="textarea">Textarea</label>
       <textarea
         id="textarea"
@@ -38,7 +38,7 @@ layout: "page"
     </div>
 
     <!-- Select -->
-    <div>
+    <div class="input-stack">
       <label for="select">Select</label>
       <select id="select" name="select" required>
         <option value selected>Select an option</option>
@@ -49,13 +49,13 @@ layout: "page"
     </div>
 
     <!-- File upload -->
-    <div>
+    <div class="input-stack">
       <label for="file">File upload</label>
       <input type="file" id="file" name="file" />
     </div>
 
     <!-- Range slider -->
-    <div>
+    <div class="input-stack">
       <label for="range">Range slider</label>
       <input
         type="range"
@@ -68,19 +68,19 @@ layout: "page"
     </div>
 
     <!-- Date-->
-    <div>
+    <div class="input-stack">
       <label for="date">Date</label>
       <input type="date" id="date" name="date" />
     </div>
 
     <!-- Time-->
-    <div>
+    <div class="input-stack">
       <label for="time">Time</label>
       <input type="time" id="time" name="time" />
     </div>
 
     <!-- Color-->
-    <div>
+    <div class="input-stack">
       <label for="color">Color</label>
       <input type="color" id="color" name="color" value="#ff69b4" />
     </div>
@@ -89,7 +89,7 @@ layout: "page"
   <!-- Input states -->
   <section class="section stack">
     <h3>Input states</h3>
-    <div>
+    <div class="input-stack">
       <label for="valid">Valid state</label>
       <input
         type="text"
@@ -101,13 +101,13 @@ layout: "page"
       <small>This is a valid value 👍</small>
     </div>
 
-    <div>
+    <div class="input-stack">
       <label for="invalid">Invalid state</label>
       <input type="text" id="invalid" name="invalid" aria-invalid="true" />
       <small>This is not a valid value 👎</small>
     </div>
 
-    <div>
+    <div class="input-stack">
       <label for="disabled">Disabled state</label>
       <input
         type="text"

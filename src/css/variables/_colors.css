@@ -1,5 +1,4 @@
 :where(html) {
-  color-scheme: light;
   --color-brand-1: dodgerblue;
   --color-brand-2: hotpink;
   --color-bg-0: white;
@@ -19,11 +18,11 @@
   --color-text-disabled: gray;
   --color-text-invalid: red;
   --color-text-success: green;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :where(html:not([data-theme-preference])) {
-    color-scheme: dark;
+@mixin color-scheme-dark {
+  & {
     --color-brand-1: hotpink;
     --color-brand-2: dodgerblue;
     --color-bg-0: black;
@@ -34,25 +33,22 @@
     --color-text-2: whitesmoke;
     --color-text-inverse-1: black;
     --color-text-inverse-2: darkgray;
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(html:not([data-theme-preference])) {
+    @apply color-scheme-dark;
   }
 }
 
 :where([data-theme-preference="dark"]) {
-  color-scheme: dark;
-  --color-brand-1: hotpink;
-  --color-brand-2: dodgerblue;
-  --color-bg-0: black;
-  --color-bg-1: #0f0f0f;
-  --color-bg-2: #1f1f1f;
-  --color-bg-3: #2e2e2e;
-  --color-text-1: white;
-  --color-text-2: whitesmoke;
-  --color-text-inverse-1: black;
-  --color-text-inverse-2: darkgray;
+  @apply color-scheme-dark;
 }
 
 html {
-  scrollbar-color: hotpink Canvas;
+  scrollbar-color: var(--color-brand-1) Canvas;
 }
 
 :root {
@@ -64,13 +60,5 @@ html {
 }
 
 ::marker {
-  color: var(--color-brand-1);
-}
-
-:-webkit-any() {
-  color: var(--color-brand-1);
-}
-
-:is() {
   color: var(--color-brand-1);
 }
