@@ -5,4 +5,5 @@ module.exports = {
   description: "Base styles and utilities for new projects",
   language: "en",
   ogImage: "",
+  version: process.env.npm_package_version,
 };

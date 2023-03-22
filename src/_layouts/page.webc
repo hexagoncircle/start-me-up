@@ -5,9 +5,7 @@ layout: base
 <header class="page-header breakout">
   <p class="inline-max">
     <small>start-me-up</small>
-    <small
-      >version: <code @text="process.env.npm_package_version"></code
-    ></small>
+    <small>version: <code @text="metadata.version"></code></small>
   </p>
 </header>
 <main class="page-content" @raw="content"></main>
