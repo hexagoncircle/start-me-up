@@ -2,7 +2,7 @@ input[type="range"] {
   --range-thumb-size: 1rem;
   --range-thumb-offset: -6px;
   --range-track-height: calc(var(--range-thumb-size) / 4);
-  --range-color-bg: var(--color-brand-1);
+  --range-color-surface: var(--color-brand1);
   appearance: none;
   width: 100%;
   cursor: pointer;
@@ -13,7 +13,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background-color: var(--range-color-bg);
+  background-color: var(--range-color-surface);
   height: var(--range-track-height);
   border: unset;
   border-radius: var(--range-thumb-radius, var(--radius-pill));
@@ -21,7 +21,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-moz-range-track {
-  background-color: var(--range-color-bg);
+  background-color: var(--range-color-surface);
   height: var(--range-track-height);
   border: unset;
   border-radius: var(--range-thumb-radius, var(--radius-pill));
@@ -34,9 +34,9 @@ input[type="range"]::-webkit-slider-thumb {
   top: var(--range-thumb-offset);
   inline-size: var(--range-thumb-size);
   block-size: var(--range-thumb-size);
-  background-color: var(--range-color-bg);
+  background-color: var(--range-color-surface);
   border-radius: var(--range-track-radius, var(--radius-pill));
-  box-shadow: var(--color-bg-1) 0 0 0 3px;
+  box-shadow: var(--color-surface2) 0 0 0 3px;
   cursor: grab;
   border: none;
   position: relative;
@@ -47,9 +47,9 @@ input[type="range"]::-moz-range-thumb {
   top: var(--range-thumb-offset);
   width: var(--range-thumb-size);
   height: var(--range-thumb-size);
-  background-color: var(--range-color-bg);
+  background-color: var(--range-color-surface);
   border-radius: var(--range-track-radius, var(--radius-pill));
-  box-shadow: var(--color-bg-1) 0 0 0 3px;
+  box-shadow: var(--color-surface2) 0 0 0 3px;
   cursor: grab;
   border: none;
   position: relative;

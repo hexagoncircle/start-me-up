@@ -8,9 +8,9 @@ input[type="file"] {
 
   &::-webkit-file-upload-button {
     @apply button;
-    --button-bg-color: var(--color-brand-1);
-    --button-border-color: var(--color-brand-1);
-    --button-text-color: var(--color-text-inverse-1);
+    --button-bg-color: var(--color-brand1);
+    --button-border-color: var(--color-brand1);
+    --button-text-color: var(--color-text1-inverse);
   }
 
   &:focus-visible::file-selector-button {

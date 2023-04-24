@@ -1,11 +1,11 @@
 :where(html) {
-  --input-border-color: var(--color-bg-3);
+  --input-border-color: var(--color-surface4);
   --input-border-style: solid;
   --input-border-width: 1px;
-  --input-bg: var(--color-bg-0);
-  --input-bg-checked: var(--color-brand-1);
-  --input-color-icon: var(--color-bg-3);
-  --input-color-icon-checked: var(--color-bg-0);
+  --input-bg: var(--color-surface0);
+  --input-bg-checked: var(--color-brand1);
+  --input-color-icon: var(--color-surface3);
+  --input-color-icon-checked: var(--color-surface0);
   --input-color-text: currentcolor;
   --input-padding: var(--space-xs);
   --input-shadow: var(--shadow-light);
@@ -104,9 +104,9 @@ label {
 }
 
 :where(input, textarea, select)[disabled] {
-  --input-border-color: var(--color-bg-2);
-  --input-bg: var(--color-bg-2);
-  --input-color-text: var(--color-text-disabled);
+  --input-border-color: var(--color-surface1);
+  --input-bg: var(--color-surface1);
+  --input-color-text: var(--color-text2);
   --input-shadow: none;
   cursor: not-allowed;
 }

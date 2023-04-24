@@ -1,5 +1,5 @@
 .gradient-text {
-  background: var(--gradient-text-bg, var(--gradient-1));
+  background: var(--gradient-text-surface, var(--gradient-1));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-clip: text;

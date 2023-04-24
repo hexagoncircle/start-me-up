@@ -10,8 +10,8 @@
     padding: var(--space-xs) var(--space-s);
     font: inherit;
     text-align: center;
-    color: var(--button-text-color, var(--color-text-1));
-    background-color: var(--button-bg-color, var(--color-bg-1));
+    color: var(--button-text-color, var(--color-text1));
+    background-color: var(--button-bg-color, var(--color-surface2));
     border: var(--button-border-width, 1px) var(--button-border-style, solid)
       var(--button-border-color, currentcolor);
     border-radius: var(--radius-s);
@@ -36,9 +36,9 @@
     [type="reset"],
     .button
   )[data-variant="primary"] {
-  --button-bg-color: var(--color-brand-1);
-  --button-border-color: var(--color-brand-1);
-  --button-text-color: var(--color-text-inverse-1);
+  --button-bg-color: var(--color-brand1);
+  --button-border-color: var(--color-brand1);
+  --button-text-color: var(--color-text1-inverse);
 }
 
 :where(
@@ -47,9 +47,9 @@
     [type="reset"],
     .button
   )[data-variant="secondary"] {
-  --button-bg-color: var(--color-brand-2);
-  --button-border-color: var(--color-brand-2);
-  --button-text-color: var(--color-text-inverse-1);
+  --button-bg-color: var(--color-brand2);
+  --button-border-color: var(--color-brand2);
+  --button-text-color: var(--color-text1-inverse);
 }
 
 :where(

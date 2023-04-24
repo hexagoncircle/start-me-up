@@ -1,9 +1,9 @@
 :where(html) {
   --table-border-width: 1px;
-  --table-border-color: var(--color-bg-2);
+  --table-border-color: var(--color-surface4);
   --table-border-style: solid;
-  --table-bg: var(--color-bg-0);
-  --table-bg-alt: var(--color-bg-1);
+  --table-surface: var(--color-surface2);
+  --table-surface-alt: var(--color-surface1);
   --table-text-align: start;
   --table-cell-min-inline-size: 125px;
   --table-header-min-inline-size: var(--table-cell-min-inline-size);
@@ -11,11 +11,14 @@
 }
 
 figure:has(table) {
-  box-shadow: var(--shadow-light);
-  border-radius: var(--radius-s);
-  background-color: var(--table-bg);
+  --push: var(--space-s);
+  --pull: calc(var(--push) * -1);
   overscroll-behavior-x: contain;
   overflow-x: auto;
+  margin-block-end: var(--pull);
+  margin-inline: var(--pull);
+  padding-block-end: var(--push);
+  padding-inline: var(--push);
 }
 
 :where(table) {
@@ -26,6 +29,9 @@ figure:has(table) {
     var(--table-border-color);
   border-radius: inherit;
   table-layout: var(--table-layout);
+  box-shadow: var(--shadow-light);
+  border-radius: var(--radius-s);
+  background-color: var(--table-surface);
 }
 
 th,
@@ -62,5 +68,5 @@ tfoot td {
 }
 
 table[role="grid"] tbody tr:nth-child(2n + 1) {
-  background-color: var(--table-bg-alt);
+  background-color: var(--table-surface-alt);
 }

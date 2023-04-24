@@ -1,19 +1,18 @@
 input[type="checkbox"][role="switch"] {
-  --size: 1.25em;
+  --size: 1.5rem;
   --offset: calc(var(--input-border-width) * 4);
-  -webkit-appearance: none;
   appearance: none;
+  position: relative;
+  display: grid;
+  align-items: center;
+  top: 0.0675em;
   outline-offset: var(--focus-outline-offset);
   padding-inline: calc(var(--offset) / 1.5);
   width: calc(var(--size) * 2);
-  background-color: var(--input-border-color);
+  background-color: var(--color-surface4);
   border: var(--input-border-width) var(--input-border-style)
     var(--input-border-color);
   border-radius: var(--radius-pill);
-  align-items: center;
-  display: grid;
-  position: relative;
-  top: 0.0675em;
 }
 
 input[type="checkbox"][role="switch"]:before {
@@ -27,8 +26,8 @@ input[type="checkbox"][role="switch"]:before {
 }
 
 input[type="checkbox"][role="switch"]:checked {
-  border-color: var(--color-brand-1);
-  background-color: var(--color-brand-1);
+  border-color: var(--color-brand1);
+  background-color: var(--color-brand1);
 }
 
 input[type="checkbox"][role="switch"]:checked:before {

@@ -1,39 +1,77 @@
 :where(html) {
-  --color-brand-1: dodgerblue;
-  --color-brand-2: hotpink;
-  --color-bg-0: white;
-  --color-bg-1: #f5f5f5;
-  --color-bg-2: #e0e0e0;
-  --color-bg-3: #d1d1d1;
-  --color-text-1: black;
-  --color-text-2: darkgray;
-  --color-text-inverse-1: white;
-  --color-text-inverse-2: whitesmoke;
-  --color-bg-disabled: #ededed;
-  --color-bg-invalid: #fdd5d5;
-  --color-bg-success: #d2f6d4;
-  --color-border-disabled: gray;
+  --brand-h: 209;
+  --brand-s: 100%;
+  --brand-l: 50%;
+
+  /* light */
+  --brand1-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+  --brand2-light: hsl(330 100% 70%);
+  --text1-light: hsl(var(--brand-h) var(--brand-s) 10%);
+  --text2-light: hsl(var(--brand-h) 10% 40%);
+  --text1-inverse-light: hsl(var(--brand-h) var(--brand-s) 95%);
+  --text2-inverse-light: hsl(var(--brand-h) var(--brand-s) 90%);
+  --surface0-light: hsl(var(--brand-h) 0% 100%);
+  --surface1-light: hsl(var(--brand-h) 25% 90%);
+  --surface2-light: hsl(var(--brand-h) 20% 99%);
+  --surface3-light: hsl(var(--brand-h) 20% 92%);
+  --surface4-light: hsl(var(--brand-h) 20% 85%);
+  --surface-shadow-light: var(--brand-h) 10% 20%;
+  --shadow-strength-light: 0.02;
+
+  /* dark */
+  --brand1-dark: hsl(var(--brand-h) var(--brand-s) calc(var(--brand-l) / 1.25));
+  --brand2-dark: hsl(330 100% 40%);
+  --text1-dark: hsl(var(--brand-h) 15% 90%);
+  --text2-dark: hsl(var(--brand-h) 5% 70%);
+  --surface0-dark: hsl(var(--brand-h) 0% 0%);
+  --surface1-dark: hsl(var(--brand-h) 10% 10%);
+  --surface2-dark: hsl(var(--brand-h) 10% 15%);
+  --surface3-dark: hsl(var(--brand-h) 5% 20%);
+  --surface4-dark: hsl(var(--brand-h) 5% 25%);
+  --surface-shadow-dark: var(--brand-h) 50% 3%;
+  --shadow-strength-dark: 0.8;
+
+  --color-surface-invalid: #fdd5d5;
+  --color-surface-success: #d2f6d4;
   --color-border-invalid: red;
   --color-border-success: green;
-  --color-text-disabled: gray;
   --color-text-invalid: red;
   --color-text-success: green;
+}
+
+:where(html) {
   color-scheme: light;
+  --color-brand1: var(--brand1-light);
+  --color-brand2: var(--brand2-light);
+  --color-text1: var(--text1-light);
+  --color-text2: var(--text2-light);
+  --color-text1-inverse: var(--text1-inverse-light);
+  --color-text2-inverse: var(--text2-inverse-light);
+  --color-surface0: var(--surface0-light);
+  --color-surface1: var(--surface1-light);
+  --color-surface2: var(--surface2-light);
+  --color-surface3: var(--surface3-light);
+  --color-surface4: var(--surface4-light);
+  --color-surface-shadow: var(--surface-shadow-light);
+  --color-shadow-strength: var(--shadow-strength-light);
 }
 
 @mixin color-scheme-dark {
   & {
-    --color-brand-1: hotpink;
-    --color-brand-2: dodgerblue;
-    --color-bg-0: black;
-    --color-bg-1: #0e0e11;
-    --color-bg-2: #1d1818;
-    --color-bg-3: #2d2323;
-    --color-text-1: white;
-    --color-text-2: whitesmoke;
-    --color-text-inverse-1: black;
-    --color-text-inverse-2: darkgray;
     color-scheme: dark;
+    --color-brand1: var(--brand1-dark);
+    --color-brand2: var(--brand2-dark);
+    --color-text1: var(--text1-dark);
+    --color-text2: var(--text2-dark);
+    --color-text1-inverse: var(--text1-inverse-dark);
+    --color-text2-inverse: var(--text2-inverse-dark);
+    --color-surface0: var(--surface0-dark);
+    --color-surface1: var(--surface1-dark);
+    --color-surface2: var(--surface2-dark);
+    --color-surface3: var(--surface3-dark);
+    --color-surface4: var(--surface4-dark);
+    --color-surface-shadow: var(--surface-shadow-dark);
+    --color-shadow-strength: var(--shadow-strength-dark);
   }
 }
 
@@ -48,17 +86,17 @@
 }
 
 html {
-  scrollbar-color: var(--color-brand-1) Canvas;
+  scrollbar-color: var(--color-brand1) Canvas;
 }
 
 :root {
-  accent-color: var(--color-brand-1);
+  accent-color: var(--color-brand1);
 }
 
 :focus-visible {
-  outline-color: var(--color-brand-1);
+  outline-color: var(--color-brand1);
 }
 
 ::marker {
-  color: var(--color-brand-1);
+  color: var(--color-brand1);
 }
