@@ -22,8 +22,8 @@ layout: "page"
 
     <!-- Required input -->
     <div class="input-stack">
-      <label for="text">Required input</label>
-      <input required type="text" id="text" name="text" />
+      <label for="required-text">Required input</label>
+      <input required type="text" id="required-text" name="text" />
     </div>
 
     <!-- Textarea -->

@@ -1,14 +1,14 @@
 :where(html) {
-  --brand-h: 209;
+  --brand-h: 210;
   --brand-s: 100%;
-  --brand-l: 50%;
+  --brand-l: 48%;
 
   /* light */
   --brand1-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
-  --brand2-light: hsl(330 100% 70%);
+  --brand2-light: hsl(330 100% 60%);
   --text1-light: hsl(var(--brand-h) var(--brand-s) 10%);
   --text2-light: hsl(var(--brand-h) 10% 40%);
-  --text1-inverse-light: hsl(var(--brand-h) var(--brand-s) 95%);
+  --text1-inverse-light: hsl(var(--brand-h) var(--brand-s) 98%);
   --text2-inverse-light: hsl(var(--brand-h) var(--brand-s) 90%);
   --surface0-light: hsl(var(--brand-h) 0% 100%);
   --surface1-light: hsl(var(--brand-h) 25% 90%);
