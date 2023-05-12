@@ -62,7 +62,7 @@ module.exports = (eleventyConfig) => {
   });
 
   eleventyConfig.setServerOptions({
-    showAllHosts: false,
+    showAllHosts: true,
   });
 
   return {
