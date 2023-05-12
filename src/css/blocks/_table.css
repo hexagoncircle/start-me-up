@@ -13,6 +13,7 @@
 figure:has(table) {
   --_push: var(--page-padding);
   --_pull: calc(var(--_push) * -1);
+  display: flex;
   overscroll-behavior-x: contain;
   overflow-x: auto;
   margin-block-end: var(--_pull);

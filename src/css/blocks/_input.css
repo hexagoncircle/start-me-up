@@ -5,7 +5,7 @@
   --input-bg: var(--color-surface0);
   --input-bg-checked: var(--color-brand1);
   --input-color-icon: var(--color-surface3);
-  --input-color-icon-checked: var(--color-surface0);
+  --input-color-icon-checked: var(--surface0-light);
   --input-color-text: currentcolor;
   --input-padding: var(--space-xs);
   --input-shadow: var(--shadow-light);
@@ -139,7 +139,7 @@ input[type="radio"] {
 
 input[type="checkbox"]:where(:not([role="switch"]))::before,
 input[type="radio"]:before {
-  --_offset: 4px;
+  --_offset: 6px;
   content: "";
   inline-size: calc(100% - var(--_offset));
   block-size: calc(100% - var(--_offset));
