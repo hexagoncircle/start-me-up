@@ -151,13 +151,13 @@ layout: "page"
           aria-invalid="false"
           value="My value"
         />
-        <small>This is a valid value 👍</small>
+        <p class="hint">This is a valid value 👍</p>
       </div>
 
       <div class="input-stack">
         <label for="invalid">Invalid state</label>
         <input type="text" id="invalid" name="invalid" aria-invalid="true" />
-        <small>This is not a valid value 👎</small>
+        <p class="hint">This is not a valid value 👎</p>
       </div>
 
       <div class="input-stack">

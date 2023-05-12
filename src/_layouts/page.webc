@@ -9,10 +9,11 @@ layout: base
   </p>
 </header>
 <main class="page-content" @raw="content"></main>
-<footer class="page-footer">
-  <div class="inline-max">
-    <small>Made with ❤️ in 2023 by Ryan Mulligan</small>
-  </div>
+<footer class="page-footer breakout">
+  <section class="inline-wrap" style="--inline-wrap-justify: space-between">
+    <p><small>Made with ❤️ in 2023 by Ryan Mulligan</small></p>
+    <color-schemer></color-schemer>
+  </section>
 </footer>
 
 <style>
@@ -28,7 +29,7 @@ layout: base
   }
 
   .page-footer {
-    border-block-start: 1px solid var(--color-surface2);
+    border-block-start: 1px solid var(--color-surface1);
     margin-block-start: var(--space-2xl);
     padding-block: var(--space-s) var(--space-m);
     font-size: var(--font--1);

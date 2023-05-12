@@ -60,6 +60,8 @@
   row-gap: var(--inline-wrap-row-gap, var(--space-s));
   flex-wrap: wrap;
   display: flex;
+  align-items: var(--inline-wrap-align, center);
+  justify-content: var(--inline-wrap-justify, initial);
 }
 
 .block-wrap {

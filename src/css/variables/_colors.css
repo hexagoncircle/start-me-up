@@ -54,6 +54,7 @@
   --color-surface4: var(--surface4-light);
   --color-surface-shadow: var(--surface-shadow-light);
   --color-shadow-strength: var(--shadow-strength-light);
+  --icon-chevron: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3crect width='256' height='256' fill='none'/%3e%3cpolyline points='208 96 128 176 48 96' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3e%3c/svg%3e");
 }
 
 @mixin color-scheme-dark {
@@ -72,6 +73,7 @@
     --color-surface4: var(--surface4-dark);
     --color-surface-shadow: var(--surface-shadow-dark);
     --color-shadow-strength: var(--shadow-strength-dark);
+    --icon-chevron: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3crect width='256' height='256' fill='none'/%3e%3cpolyline points='208 96 128 176 48 96' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3e%3c/svg%3e");
   }
 }
 
@@ -81,7 +83,7 @@
   }
 }
 
-:where([data-theme-preference="dark"]) {
+:where(.theme-dark) {
   @apply color-scheme-dark;
 }
 

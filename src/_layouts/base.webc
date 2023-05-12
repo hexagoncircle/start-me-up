@@ -35,10 +35,10 @@
 
     <link webc:keep rel="stylesheet" href="/css/global.css" />
     <style @raw="getCss(page.url)" webc:keep></style>
-    <script @raw="getJs(page.url)" webc:keep></script>
+    <script webc:keep @raw="getBundle('js', 'head')"></script>
   </head>
   <body class="pancake-stack">
     <div @raw="content" webc:nokeep></div>
-    <script @raw="getJs(page.url, 'defer')" webc:keep></script>
+    <script @raw="getJs(page.url)" webc:keep></script>
   </body>
 </html>

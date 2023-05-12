@@ -54,13 +54,11 @@ input:required + label:after {
 }
 
 select {
-  appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%);
-  background-position: calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-image: var(--icon-chevron);
   background-repeat: no-repeat;
-  background-size: 5px 5px;
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: 0.8em;
+  padding-inline-end: 1.7em;
 }
 
 fieldset {
@@ -89,7 +87,7 @@ label {
   --input-border-color: var(--color-border-success);
   --input-color-text: var(--color-text-success);
 
-  & + * {
+  & + .hint {
     color: var(--color-text-success);
   }
 }
@@ -98,7 +96,7 @@ label {
   --input-border-color: var(--color-border-invalid);
   --input-color-text: var(--color-text-invalid);
 
-  & + * {
+  & + .hint {
     color: var(--color-text-invalid);
   }
 }
