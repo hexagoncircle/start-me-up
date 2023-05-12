@@ -79,6 +79,11 @@
   gap: var(--space-2xs);
 }
 
-.section + .section {
-  margin-block: var(--space-l);
+.section + .section,
+.section + .heading {
+  margin-block-start: var(--space-l);
+}
+
+.pancake + .pancake {
+  margin-block-start: var(--space-xl);
 }

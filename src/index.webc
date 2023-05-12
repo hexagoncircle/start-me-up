@@ -2,264 +2,319 @@
 layout: "page"
 ---
 
-<form class="breakout section stack" style="--max-inline-size: 500px">
-  <h2>Form inputs</h2>
-
+<article class="pancake breakout stack">
+  <h2 class="heading">Headings</h2>
   <section class="section stack">
-    <!-- Text -->
-    <div class="input-stack">
-      <label for="text">Text</label>
-      <input
-        type="text"
-        id="text"
-        name="text"
-        placeholder="Input placeholder"
-      />
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+  </section>
+
+  <h2 class="heading">Paragraphs</h2>
+  <section class="section content stack">
+    <p>
+      Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu jelly
+      beans. Candy topping sweet jujubes sweet roll croissant gummies. Topping
+      ice cream dessert tiramisu lollipop sesame snaps. Brownie liquorice
+      chocolate tootsie roll tart dessert wafer topping. Cheesecake tart cotton
+      candy tootsie roll wafer soufflé.
+    </p>
+    <p>
+      Chupa chups powder icing cookie chocolate cake. Lemon drops candy wafer
+      liquorice bear claw lollipop. Icing shortbread pudding pudding cupcake
+      powder gummi bears croissant. Pastry cookie marshmallow tootsie roll
+      liquorice. Halvah candy canes oat cake gummies cotton candy cotton candy.
+      Toffee bonbon chocolate bear claw pie sweet roll.
+    </p>
+    <p class="font-large">
+      Large: Chocolate bar toffee sweet roll marzipan toffee dragée. Jelly
+      gingerbread pastry chocolate cake wafer brownie. Jujubes cotton candy
+      chocolate cake pie bear claw sweet roll.
+    </p>
+    <p>
       <small>
-        A short description or helper text related to this form input.
+        Small: Chocolate bar toffee sweet roll marzipan toffee dragée. Jelly
+        gingerbread pastry chocolate cake wafer brownie. Jujubes cotton candy
+        chocolate cake pie bear claw sweet roll.
       </small>
-    </div>
-
-    <!-- Required input -->
-    <div class="input-stack">
-      <label for="required-text">Required input</label>
-      <input required type="text" id="required-text" name="text" />
-    </div>
-
-    <!-- Textarea -->
-    <div class="input-stack">
-      <label for="textarea">Textarea</label>
-      <textarea
-        id="textarea"
-        name="textarea"
-        rows="3"
-        class="resize-block"
-      ></textarea>
-    </div>
-
-    <!-- Select -->
-    <div class="input-stack">
-      <label for="select">Select</label>
-      <select id="select" name="select" required>
-        <option value selected>Select an option</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
-    </div>
-
-    <!-- File upload -->
-    <div class="input-stack">
-      <label for="file">File upload</label>
-      <input type="file" id="file" name="file" />
-    </div>
-
-    <!-- Range slider -->
-    <div class="input-stack">
-      <label for="range">Range slider</label>
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value="25"
-        id="range"
-        name="range"
-      />
-    </div>
-
-    <div class="inline-wrap">
-      <!-- Date-->
-      <div class="input-stack" style="flex: 1 0 225px">
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" />
-      </div>
-
-      <!-- Time-->
-      <div class="input-stack" style="flex: 1 0 125px">
-        <label for="time">Time</label>
-        <input type="time" id="time" name="time" />
-      </div>
-    </div>
-
-    <div class="input-stack">
-      <label for="datetime">Date & time</label>
-      <input
-        id="datetime"
-        type="datetime-local"
-        name="datetime"
-        value="2023-11-23T20:30"
-      />
-    </div>
-
-    <!-- Color-->
-    <div class="input-stack">
-      <label for="color">Color</label>
-      <input type="color" id="color" name="color" value="#ff69b4" />
-    </div>
+    </p>
   </section>
+</article>
 
-  <!-- Input states -->
-  <section class="section stack">
-    <h3>Input states</h3>
-    <div class="input-stack">
-      <label for="valid">Valid state</label>
-      <input
-        type="text"
-        id="valid"
-        name="valid"
-        aria-invalid="false"
-        value="My value"
-      />
-      <small>This is a valid value 👍</small>
-    </div>
-
-    <div class="input-stack">
-      <label for="invalid">Invalid state</label>
-      <input type="text" id="invalid" name="invalid" aria-invalid="true" />
-      <small>This is not a valid value 👎</small>
-    </div>
-
-    <div class="input-stack">
-      <label for="disabled">Disabled state</label>
-      <input
-        type="text"
-        id="disabled"
-        name="disabled"
-        disabled
-        value="Value cannot be changed"
-      />
-    </div>
-  </section>
-
-  <section class="section stack">
-    <h3>Fieldsets</h3>
-    <!-- Checkboxes -->
-    <fieldset>
-      <legend>Checkboxes</legend>
-      <div class="input-group">
-        <input type="checkbox" id="check-1" name="check-1" checked />
-        <label for="check-1">One</label>
-      </div>
-      <div class="input-group">
-        <input type="checkbox" id="check-2" name="check-2" />
-        <label for="check-2">Two</label>
-      </div>
-      <div class="input-group">
-        <input type="checkbox" id="check-3" name="check-3" />
-        <label for="check-3">Three</label>
-      </div>
-      <div class="input-group">
-        <input type="checkbox" id="check-4" name="check-4" />
-        <label for="check-4">Four</label>
-      </div>
-    </fieldset>
-
-    <!-- Inline form controls -->
-    <fieldset class="inline-wrap">
-      <legend>Inline checkboxes</legend>
-      <div class="input-group">
+<article class="pancake breakout stack">
+  <h2 class="heading">Form inputs</h2>
+  <form class="stack" style="max-inline-size: 50ch">
+    <section class="section stack">
+      <!-- Text -->
+      <div class="input-stack">
+        <label for="text">Text</label>
         <input
-          type="checkbox"
-          id="inline-check-1"
-          name="inline-check-1"
-          checked
+          type="text"
+          id="text"
+          name="text"
+          placeholder="Input placeholder"
         />
-        <label for="inline-check-1">One</label>
+        <small>
+          A short description or helper text related to this form input.
+        </small>
       </div>
-      <div class="input-group">
-        <input type="checkbox" id="inline-check-2" name="inline-check-2" />
-        <label for="inline-check-2">Two</label>
-      </div>
-      <div class="input-group">
-        <input type="checkbox" id="inline-check-3" name="inline-check-3" />
-        <label for="inline-check-3">Three</label>
-      </div>
-      <div class="input-group">
-        <input type="checkbox" id="inline-check-4" name="inline-check-4" />
-        <label for="inline-check-4">Four</label>
-      </div>
-    </fieldset>
 
-    <!-- Radio buttons -->
-    <fieldset>
-      <legend>Radio buttons</legend>
-      <div class="input-group">
-        <input type="radio" id="radio-1" name="radio" value="radio-1" checked />
-        <label for="radio-1">One</label>
+      <!-- Required input -->
+      <div class="input-stack">
+        <label for="required-text">Required input</label>
+        <input required type="text" id="required-text" name="text" />
       </div>
-      <div class="input-group">
-        <input type="radio" id="radio-2" name="radio" value="radio-2" />
-        <label for="radio-2">Two</label>
-      </div>
-      <div class="input-group">
-        <input type="radio" id="radio-3" name="radio" value="radio-3" />
-        <label for="radio-3">Three</label>
-      </div>
-      <div class="input-group">
-        <input type="radio" id="radio-4" name="radio" value="radio-4" />
-        <label for="radio-4">Four</label>
-      </div>
-    </fieldset>
 
-    <!-- Switch -->
-    <fieldset>
-      <legend>Toggle Switches</legend>
+      <!-- Textarea -->
+      <div class="input-stack">
+        <label for="textarea">Textarea</label>
+        <textarea
+          id="textarea"
+          name="textarea"
+          rows="3"
+          class="resize-block"
+        ></textarea>
+      </div>
 
-      <div class="input-group">
+      <!-- Select -->
+      <div class="input-stack">
+        <label for="select">Select</label>
+        <select id="select" name="select" required>
+          <option value selected>Select an option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+
+      <!-- File upload -->
+      <div class="input-stack">
+        <label for="file">File upload</label>
+        <input type="file" id="file" name="file" />
+      </div>
+
+      <!-- Range slider -->
+      <div class="input-stack">
+        <label for="range">Range slider</label>
         <input
-          type="checkbox"
-          id="switch-1"
-          name="switch-1"
-          role="switch"
-          checked
+          type="range"
+          min="0"
+          max="100"
+          value="25"
+          id="range"
+          name="range"
         />
-        <label for="switch-1">Allow notications</label>
       </div>
-      <div class="input-group">
-        <input type="checkbox" id="switch-2" name="switch-2" role="switch" />
-        <label for="switch-2">Enable dark theme</label>
+
+      <div class="inline-wrap">
+        <!-- Date-->
+        <div class="input-stack" style="flex: 1 0 225px">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <!-- Time-->
+        <div class="input-stack" style="flex: 1 0 125px">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time" />
+        </div>
       </div>
-    </fieldset>
-  </section>
 
-  <section class="section stack">
-    <!-- Input buttons -->
-    <h3>Input buttons</h3>
-    <div class="inline-wrap">
-      <input type="reset" value="Reset" />
-      <input type="submit" data-variant="primary" value="Submit" />
-    </div>
+      <div class="input-stack">
+        <label for="datetime">Date & time</label>
+        <input
+          id="datetime"
+          type="datetime-local"
+          name="datetime"
+          value="2023-11-23T20:30"
+        />
+      </div>
 
-    <!-- Buttons -->
-    <h3 style="--stack-space: var(--space-l)">Button variants</h3>
-    <div class="inline-wrap">
-      <button onclick="event.preventDefault()">Default</button>
-      <button data-variant="primary" onclick="event.preventDefault()">
-        Primary
-      </button>
-      <button data-variant="secondary" onclick="event.preventDefault()">
-        Secondary
-      </button>
-      <button data-variant="dashed" onclick="event.preventDefault()">
-        Dashed
-      </button>
-      <button onclick="event.preventDefault()">
-        <inline-svg aria-hidden="true" src="public/icons/menu.svg"></inline-svg>
-        <span>Hamburgers</span>
-      </button>
-      <button data-variant="primary" onclick="event.preventDefault()">
-        <span>Search this page</span>
-        <inline-svg
-          aria-hidden="true"
-          src="public/icons/search.svg"
-        ></inline-svg>
-      </button>
-    </div>
-  </section>
-</form>
+      <!-- Color-->
+      <div class="input-stack">
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color" value="#ff69b4" />
+      </div>
+    </section>
 
-<section class="breakout section stack">
-  <h3>Table</h3>
+    <!-- Input states -->
+    <section class="section stack">
+      <h3>Input states</h3>
+      <div class="input-stack">
+        <label for="valid">Valid state</label>
+        <input
+          type="text"
+          id="valid"
+          name="valid"
+          aria-invalid="false"
+          value="My value"
+        />
+        <small>This is a valid value 👍</small>
+      </div>
+
+      <div class="input-stack">
+        <label for="invalid">Invalid state</label>
+        <input type="text" id="invalid" name="invalid" aria-invalid="true" />
+        <small>This is not a valid value 👎</small>
+      </div>
+
+      <div class="input-stack">
+        <label for="disabled">Disabled state</label>
+        <input
+          type="text"
+          id="disabled"
+          name="disabled"
+          disabled
+          value="Value cannot be changed"
+        />
+      </div>
+    </section>
+
+    <section class="section stack">
+      <h3>Fieldsets</h3>
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>Checkboxes</legend>
+        <div class="input-group">
+          <input type="checkbox" id="check-1" name="check-1" checked />
+          <label for="check-1">One</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="check-2" name="check-2" />
+          <label for="check-2">Two</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="check-3" name="check-3" />
+          <label for="check-3">Three</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="check-4" name="check-4" />
+          <label for="check-4">Four</label>
+        </div>
+      </fieldset>
+
+      <!-- Inline form controls -->
+      <fieldset class="inline-wrap">
+        <legend>Inline checkboxes</legend>
+        <div class="input-group">
+          <input
+            type="checkbox"
+            id="inline-check-1"
+            name="inline-check-1"
+            checked
+          />
+          <label for="inline-check-1">One</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="inline-check-2" name="inline-check-2" />
+          <label for="inline-check-2">Two</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="inline-check-3" name="inline-check-3" />
+          <label for="inline-check-3">Three</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="inline-check-4" name="inline-check-4" />
+          <label for="inline-check-4">Four</label>
+        </div>
+      </fieldset>
+
+      <!-- Radio buttons -->
+      <fieldset>
+        <legend>Radio buttons</legend>
+        <div class="input-group">
+          <input
+            type="radio"
+            id="radio-1"
+            name="radio"
+            value="radio-1"
+            checked
+          />
+          <label for="radio-1">One</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="radio-2" name="radio" value="radio-2" />
+          <label for="radio-2">Two</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="radio-3" name="radio" value="radio-3" />
+          <label for="radio-3">Three</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="radio-4" name="radio" value="radio-4" />
+          <label for="radio-4">Four</label>
+        </div>
+      </fieldset>
+
+      <!-- Switch -->
+      <fieldset>
+        <legend>Toggle Switches</legend>
+
+        <div class="input-group">
+          <input
+            type="checkbox"
+            id="switch-1"
+            name="switch-1"
+            role="switch"
+            checked
+          />
+          <label for="switch-1">Allow notications</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="switch-2" name="switch-2" role="switch" />
+          <label for="switch-2">Enable dark theme</label>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="section stack">
+      <!-- Input buttons -->
+      <h3>Input buttons</h3>
+      <div class="inline-wrap">
+        <input type="reset" value="Reset" />
+        <input type="submit" data-variant="primary" value="Submit" />
+      </div>
+
+      <!-- Buttons -->
+      <h3 style="--stack-space: var(--space-l)">Button variants</h3>
+      <div class="inline-wrap">
+        <button onclick="event.preventDefault()">Default</button>
+        <button data-variant="primary" onclick="event.preventDefault()">
+          Primary
+        </button>
+        <button data-variant="secondary" onclick="event.preventDefault()">
+          Secondary
+        </button>
+        <button data-variant="dashed" onclick="event.preventDefault()">
+          Dashed
+        </button>
+        <button onclick="event.preventDefault()">
+          <inline-svg
+            aria-hidden="true"
+            src="public/icons/menu.svg"
+          ></inline-svg>
+          <span>Hamburgers</span>
+        </button>
+        <button data-variant="primary" onclick="event.preventDefault()">
+          <span>Search this page</span>
+          <inline-svg
+            aria-hidden="true"
+            src="public/icons/search.svg"
+          ></inline-svg>
+        </button>
+      </div>
+    </section>
+  </form>
+</article>
+
+<article class="pancake breakout stack">
+  <h2 class="heading">Table</h2>
+  <p>
+    Tables wrapped in a <code>figure</code> tag will allow any overflow to
+    scroll horizontally.
+  </p>
   <figure>
     <table>
       <thead>
@@ -352,4 +407,4 @@ layout: "page"
       </tbody>
     </table>
   </figure>
-</section>
+</article>

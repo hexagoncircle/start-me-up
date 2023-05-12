@@ -6,11 +6,6 @@ body {
   line-height: var(--font-line-height);
 }
 
-small {
-  font-size: 0.8em;
-  display: inline-block;
-}
-
 code {
   font-family: var(--font-family-monospace);
   background-color: var(--color-surface2);

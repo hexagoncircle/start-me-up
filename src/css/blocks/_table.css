@@ -11,14 +11,14 @@
 }
 
 figure:has(table) {
-  --push: var(--space-s);
-  --pull: calc(var(--push) * -1);
+  --_push: var(--page-padding);
+  --_pull: calc(var(--_push) * -1);
   overscroll-behavior-x: contain;
   overflow-x: auto;
-  margin-block-end: var(--pull);
-  margin-inline: var(--pull);
-  padding-block-end: var(--push);
-  padding-inline: var(--push);
+  margin-block-end: var(--_pull);
+  margin-inline: var(--_pull);
+  padding-block-end: var(--_push);
+  padding-inline: var(--_push);
 }
 
 :where(table) {
