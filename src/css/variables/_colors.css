@@ -78,7 +78,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :where(html:not([data-theme-preference])) {
+  :where(html:not(.theme-light)) {
     @apply color-scheme-dark;
   }
 }
