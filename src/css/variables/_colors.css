@@ -4,7 +4,7 @@
   --brand-l: 48%;
 
   /* light */
-  --brand1-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+  --brand-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
   --brand2-light: hsl(330 100% 60%);
   --text1-light: hsl(var(--brand-h) var(--brand-s) 10%);
   --text2-light: hsl(var(--brand-h) 10% 40%);
@@ -19,7 +19,7 @@
   --shadow-strength-light: 0.02;
 
   /* dark */
-  --brand1-dark: hsl(var(--brand-h) var(--brand-s) calc(var(--brand-l) / 1.25));
+  --brand-dark: hsl(var(--brand-h) var(--brand-s) calc(var(--brand-l) / 1.25));
   --brand2-dark: hsl(330 100% 40%);
   --text1-dark: hsl(var(--brand-h) 15% 90%);
   --text2-dark: hsl(var(--brand-h) 5% 70%);
@@ -41,7 +41,7 @@
 
 :where(html) {
   color-scheme: light;
-  --color-brand1: var(--brand1-light);
+  --color-brand: var(--brand-light);
   --color-brand2: var(--brand2-light);
   --color-text1: var(--text1-light);
   --color-text2: var(--text2-light);
@@ -60,7 +60,7 @@
 @mixin color-scheme-dark {
   & {
     color-scheme: dark;
-    --color-brand1: var(--brand1-dark);
+    --color-brand: var(--brand-dark);
     --color-brand2: var(--brand2-dark);
     --color-text1: var(--text1-dark);
     --color-text2: var(--text2-dark);
@@ -85,20 +85,4 @@
 
 :where(.theme-dark) {
   @apply color-scheme-dark;
-}
-
-html {
-  scrollbar-color: var(--color-brand1) Canvas;
-}
-
-:root {
-  accent-color: var(--color-brand1);
-}
-
-:focus-visible {
-  outline-color: var(--color-brand1);
-}
-
-::marker {
-  color: var(--color-brand1);
 }

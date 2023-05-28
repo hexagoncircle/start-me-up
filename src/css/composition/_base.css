@@ -1,3 +1,11 @@
+:root {
+  accent-color: var(--color-brand1);
+}
+
+html {
+  scrollbar-color: var(--color-brand1) Canvas;
+}
+
 body {
   color: var(--color-text1);
   background: var(--color-surface2);
@@ -6,12 +14,10 @@ body {
   line-height: var(--font-line-height);
 }
 
-code {
-  font-family: var(--font-family-monospace);
-  background-color: var(--color-surface2);
-  border-radius: var(--radius-xs);
-  padding: 0.125rem 0.25rem;
-  font-size: 0.85em;
-  position: relative;
-  top: -0.025em;
+:focus-visible {
+  outline-color: var(--color-brand1);
+}
+
+::marker {
+  color: var(--color-brand1);
 }
