@@ -358,7 +358,7 @@ layout: "page"
       </tbody>
       <tfoot>
         <tr>
-          <th scope="col">Total features</th>
+          <th scope="row">Total features</th>
           <td scope="col">1</td>
           <td scope="col">2</td>
           <td scope="col">3</td>
