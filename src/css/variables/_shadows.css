@@ -13,3 +13,10 @@
     0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
     0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 }
+
+@media (prefers-color-scheme: dark) {
+  :where(html:not(.theme-light)) {
+    --shadow-color: var(--brand-h) 60% 2%;
+    --shadow-strength: 30%;
+  }
+}
