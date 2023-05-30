@@ -1,6 +1,6 @@
 code {
   font-family: var(--font-family-monospace);
-  background-color: var(--color-surface2);
+  background-color: var(--color-surface-2);
   border-radius: var(--radius-xs);
   padding: 0.125rem 0.25rem;
   font-size: 0.85em;

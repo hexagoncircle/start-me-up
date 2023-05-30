@@ -1,22 +1,13 @@
 input[type="file"] {
-  --_offset: 4px;
+  --_offset: 3px;
   appearance: none;
   padding: var(--_offset);
-  margin: calc(var(--_offset) * -1);
   box-shadow: none;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  outline: none;
+  background-color: transparent;
+  border-style: dashed;
+  cursor: pointer;
 
   &::file-selector-button {
-    @apply button;
     margin-right: var(--space-xs);
-    --button-bg-color: var(--color-brand1);
-    --button-border-color: var(--color-brand1);
-    --button-text-color: var(--color-text1-inverse);
-  }
-
-  &:focus-visible::file-selector-button {
-    outline: var(--focus-outline);
   }
 }

@@ -9,7 +9,7 @@ input[type="checkbox"][role="switch"] {
   outline-offset: var(--focus-outline-offset);
   padding-inline: calc(var(--_offset) / 1.5);
   width: calc(var(--_size) * 2);
-  background-color: var(--color-surface4);
+  background-color: var(--color-surface-4);
   border: var(--input-border-width) var(--input-border-style)
     var(--input-border-color);
   border-radius: var(--radius-pill);
@@ -20,14 +20,14 @@ input[type="checkbox"][role="switch"]:before {
   width: calc(var(--_size) - var(--_offset) * 2);
   height: calc(var(--_size) - var(--_offset) * 2);
   border-radius: var(--radius-circle);
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--shadow-1);
   background-color: #fff;
   display: block;
 }
 
 input[type="checkbox"][role="switch"]:checked {
-  border-color: var(--color-brand1);
-  background-color: var(--color-brand1);
+  border-color: var(--color-brand-1);
+  background-color: var(--color-brand-1);
 }
 
 input[type="checkbox"][role="switch"]:checked:before {

@@ -4,32 +4,28 @@
   --brand-l: 48%;
 
   /* light */
-  --brand-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
-  --brand2-light: hsl(330 100% 60%);
-  --text1-light: hsl(var(--brand-h) var(--brand-s) 10%);
-  --text2-light: hsl(var(--brand-h) 10% 40%);
-  --text1-inverse-light: hsl(var(--brand-h) var(--brand-s) 98%);
-  --text2-inverse-light: hsl(var(--brand-h) var(--brand-s) 90%);
-  --surface0-light: hsl(var(--brand-h) 0% 100%);
-  --surface1-light: hsl(var(--brand-h) 25% 90%);
-  --surface2-light: hsl(var(--brand-h) 20% 99%);
-  --surface3-light: hsl(var(--brand-h) 20% 92%);
-  --surface4-light: hsl(var(--brand-h) 20% 85%);
-  --surface-shadow-light: var(--brand-h) 10% 20%;
-  --shadow-strength-light: 0.02;
+  --brand-1-light: hsl(var(--brand-h) var(--brand-s) var(--brand-l));
+  --brand-2-light: hsl(330 100% 60%);
+  --text-1-light: hsl(var(--brand-h) var(--brand-s) 10%);
+  --text-2-light: hsl(var(--brand-h) 10% 40%);
+  --text-1-inverse-light: hsl(var(--brand-h) var(--brand-s) 98%);
+  --text-2-inverse-light: hsl(var(--brand-h) var(--brand-s) 90%);
+  --surface-0-light: hsl(var(--brand-h) 0% 100%);
+  --surface-1-light: hsl(var(--brand-h) 25% 90%);
+  --surface-2-light: hsl(var(--brand-h) 20% 99%);
+  --surface-3-light: hsl(var(--brand-h) 20% 92%);
+  --surface-4-light: hsl(var(--brand-h) 20% 80%);
 
   /* dark */
-  --brand-dark: hsl(var(--brand-h) var(--brand-s) calc(var(--brand-l) / 1.25));
-  --brand2-dark: hsl(330 100% 40%);
-  --text1-dark: hsl(var(--brand-h) 15% 90%);
-  --text2-dark: hsl(var(--brand-h) 5% 70%);
-  --surface0-dark: hsl(var(--brand-h) 0% 0%);
-  --surface1-dark: hsl(var(--brand-h) 10% 10%);
-  --surface2-dark: hsl(var(--brand-h) 10% 15%);
-  --surface3-dark: hsl(var(--brand-h) 5% 20%);
-  --surface4-dark: hsl(var(--brand-h) 5% 25%);
-  --surface-shadow-dark: var(--brand-h) 50% 3%;
-  --shadow-strength-dark: 0.8;
+  --brand-1-dark: hsl(var(--brand-h) var(--brand-s) calc(var(--brand-l) / 1.2));
+  --brand-2-dark: hsl(330 100% 40%);
+  --text-1-dark: hsl(var(--brand-h) 15% 90%);
+  --text-2-dark: hsl(var(--brand-h) 5% 70%);
+  --surface-0-dark: hsl(var(--brand-h) 0% 0%);
+  --surface-1-dark: hsl(var(--brand-h) 8% 6%);
+  --surface-2-dark: hsl(var(--brand-h) 8% 12%);
+  --surface-3-dark: hsl(var(--brand-h) 8% 20%);
+  --surface-4-dark: hsl(var(--brand-h) 8% 25%);
 
   --color-surface-invalid: #fdd5d5;
   --color-surface-success: #d2f6d4;
@@ -39,50 +35,52 @@
   --color-text-success: green;
 }
 
-:where(html) {
-  color-scheme: light;
-  --color-brand: var(--brand-light);
-  --color-brand2: var(--brand2-light);
-  --color-text1: var(--text1-light);
-  --color-text2: var(--text2-light);
-  --color-text1-inverse: var(--text1-inverse-light);
-  --color-text2-inverse: var(--text2-inverse-light);
-  --color-surface0: var(--surface0-light);
-  --color-surface1: var(--surface1-light);
-  --color-surface2: var(--surface2-light);
-  --color-surface3: var(--surface3-light);
-  --color-surface4: var(--surface4-light);
-  --color-surface-shadow: var(--surface-shadow-light);
-  --color-shadow-strength: var(--shadow-strength-light);
-  --icon-chevron: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3crect width='256' height='256' fill='none'/%3e%3cpolyline points='208 96 128 176 48 96' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3e%3c/svg%3e");
+@mixin color-scheme-light {
+  & {
+    color-scheme: light;
+    --color-brand-1: var(--brand-1-light);
+    --color-brand-2: var(--brand-2-light);
+    --color-text-1: var(--text-1-light);
+    --color-text-2: var(--text-2-light);
+    --color-text-1-inverse: var(--text-1-inverse-light);
+    --color-text-2-inverse: var(--text-2-inverse-light);
+    --color-surface-0: var(--surface-0-light);
+    --color-surface-1: var(--surface-1-light);
+    --color-surface-2: var(--surface-2-light);
+    --color-surface-3: var(--surface-3-light);
+    --color-surface-4: var(--surface-4-light);
+    --icon-chevron: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3crect width='256' height='256' fill='none'/%3e%3cpolyline points='208 96 128 176 48 96' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3e%3c/svg%3e");
+  }
 }
 
 @mixin color-scheme-dark {
   & {
     color-scheme: dark;
-    --color-brand: var(--brand-dark);
-    --color-brand2: var(--brand2-dark);
-    --color-text1: var(--text1-dark);
-    --color-text2: var(--text2-dark);
-    --color-text1-inverse: var(--text1-inverse-dark);
-    --color-text2-inverse: var(--text2-inverse-dark);
-    --color-surface0: var(--surface0-dark);
-    --color-surface1: var(--surface1-dark);
-    --color-surface2: var(--surface2-dark);
-    --color-surface3: var(--surface3-dark);
-    --color-surface4: var(--surface4-dark);
-    --color-surface-shadow: var(--surface-shadow-dark);
-    --color-shadow-strength: var(--shadow-strength-dark);
+    --color-brand-1: var(--brand-1-dark);
+    --color-brand-2: var(--brand-2-dark);
+    --color-text-1: var(--text-1-dark);
+    --color-text-2: var(--text-2-dark);
+    --color-text-1-inverse: var(--text-1-inverse-dark);
+    --color-text-2-inverse: var(--text-2-inverse-dark);
+    --color-surface-0: var(--surface-0-dark);
+    --color-surface-1: var(--surface-1-dark);
+    --color-surface-2: var(--surface-2-dark);
+    --color-surface-3: var(--surface-3-dark);
+    --color-surface-4: var(--surface-4-dark);
     --icon-chevron: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3e%3crect width='256' height='256' fill='none'/%3e%3cpolyline points='208 96 128 176 48 96' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='24'/%3e%3c/svg%3e");
   }
+}
+
+:where(html, .theme-light) {
+  @apply color-scheme-light;
+}
+
+:where(.theme-dark) {
+  @apply color-scheme-dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :where(html:not(.theme-light)) {
     @apply color-scheme-dark;
   }
-}
-
-:where(.theme-dark) {
-  @apply color-scheme-dark;
 }

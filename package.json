@@ -1,6 +1,6 @@
 {
   "name": "start-me-up",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Base styles and utilities for new projects",
   "main": "index.js",
   "scripts": {

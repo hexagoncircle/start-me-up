@@ -20,7 +20,7 @@ layout: base
   .page-header {
     padding-block: var(--space-s);
     margin-block-end: var(--space-l);
-    border-block-end: 1px solid var(--color-surface1);
+    border-block-end: 1px solid var(--color-surface-1);
   }
 
   .page-header p {
@@ -29,7 +29,7 @@ layout: base
   }
 
   .page-footer {
-    border-block-start: 1px solid var(--color-surface1);
+    border-block-start: 1px solid var(--color-surface-1);
     margin-block-start: var(--space-2xl);
     padding-block: var(--space-s) var(--space-m);
     font-size: var(--font--1);

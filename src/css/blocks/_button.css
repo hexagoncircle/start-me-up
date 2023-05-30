@@ -1,21 +1,21 @@
 @mixin button {
   & {
-    --button-icon-size: 1.25em;
+    --_icon-size: 1.25em;
     appearance: none;
     outline: revert;
     outline-offset: var(--focus-outline-offset);
     cursor: pointer;
     display: inline-flex;
     gap: var(--space-xs);
-    padding: var(--space-xs) var(--space-s);
+    padding: var(--button-padding, var(--space-xs) var(--space-m));
     font: inherit;
     text-align: center;
-    color: var(--button-text-color, var(--color-text1));
-    background-color: var(--button-bg-color, var(--color-surface2));
+    color: var(--button-text-color, var(--color-text-1));
+    background-color: var(--button-bg-color, var(--color-surface-2));
     border: var(--button-border-width, 1px) var(--button-border-style, solid)
       var(--button-border-color, currentcolor);
     border-radius: var(--radius-s);
-    box-shadow: var(--shadow-light);
+    box-shadow: var(--shadow-1);
     line-height: normal;
     text-decoration: none;
     position: relative;
@@ -26,7 +26,11 @@
   }
 }
 
-:is(button, input[type="submit"], input[type="reset"], .button) {
+:where(button, input[type="submit"], input[type="reset"], .button) {
+  @apply button;
+}
+
+input[type="file"]::file-selector-button {
   @apply button;
 }
 
@@ -35,10 +39,11 @@
     [type="submit"],
     [type="reset"],
     .button
-  )[data-variant="primary"] {
-  --button-bg-color: var(--color-brand1);
-  --button-border-color: var(--color-brand1);
-  --button-text-color: var(--color-text1-inverse);
+  )[data-variant="primary"],
+input[type="file"]::file-selector-button {
+  --button-bg-color: var(--color-brand-1);
+  --button-border-color: var(--color-brand-1);
+  --button-text-color: var(--color-text-1-inverse);
 }
 
 :where(
@@ -47,9 +52,9 @@
     [type="reset"],
     .button
   )[data-variant="secondary"] {
-  --button-bg-color: var(--color-brand2);
-  --button-border-color: var(--color-brand2);
-  --button-text-color: var(--color-text1-inverse);
+  --button-bg-color: var(--color-brand-2);
+  --button-border-color: var(--color-brand-2);
+  --button-text-color: var(--color-text-1-inverse);
 }
 
 :where(
@@ -62,8 +67,8 @@
 }
 
 :where(button, [type="submit"], [type="reset"], .button) svg {
-  inline-size: var(--button-icon-size);
-  block-size: var(--button-icon-size);
+  inline-size: var(--button-icon-size, var(--_icon-size));
+  block-size: var(--button-icon-size, var(--_icon-size));
 }
 
 [data-group="actions"] {

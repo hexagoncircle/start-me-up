@@ -81,6 +81,10 @@
   gap: var(--space-2xs);
 }
 
+.input-stack > label {
+  justify-self: start;
+}
+
 .section + .section,
 .section + .heading {
   margin-block-start: var(--space-l);

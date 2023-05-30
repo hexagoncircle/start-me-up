@@ -1,9 +1,9 @@
 :where(html) {
   --table-border-width: 1px;
-  --table-border-color: var(--color-surface4);
+  --table-border-color: var(--color-surface-4);
   --table-border-style: solid;
-  --table-surface: var(--color-surface2);
-  --table-surface-alt: var(--color-surface1);
+  --table-surface: var(--color-surface-2);
+  --table-surface-alt: var(--color-surface-1);
   --table-text-align: start;
   --table-cell-min-inline-size: 125px;
   --table-header-min-inline-size: var(--table-cell-min-inline-size);
@@ -30,7 +30,7 @@ figure:has(table) {
     var(--table-border-color);
   border-radius: inherit;
   table-layout: var(--table-layout);
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--shadow-1);
   border-radius: var(--radius-s);
   background-color: var(--table-surface);
 }

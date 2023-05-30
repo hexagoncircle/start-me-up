@@ -1,14 +1,14 @@
-:where(html) {
-  --input-border-color: var(--color-surface4);
+:where(input, select, textarea) {
+  --input-border-color: var(--color-surface-4);
   --input-border-style: solid;
   --input-border-width: 1px;
-  --input-bg: var(--color-surface0);
-  --input-bg-checked: var(--color-brand1);
-  --input-color-icon: var(--color-surface3);
-  --input-color-icon-checked: var(--surface0-light);
+  --input-bg: var(--color-surface-0);
+  --input-bg-checked: var(--color-brand-1);
+  --input-color-icon: var(--color-surface-3);
+  --input-color-icon-checked: var(--surface-0-light);
   --input-color-text: currentcolor;
   --input-padding: var(--space-xs);
-  --input-shadow: var(--shadow-light);
+  --input-shadow: var(--shadow-1);
 }
 
 input:-webkit-autofill {
@@ -102,9 +102,9 @@ label {
 }
 
 :where(input, textarea, select)[disabled] {
-  --input-border-color: var(--color-surface1);
-  --input-bg: var(--color-surface1);
-  --input-color-text: var(--color-text2);
+  --input-border-color: var(--color-surface-1);
+  --input-bg: var(--color-surface-1);
+  --input-color-text: var(--color-text-2);
   --input-shadow: none;
   cursor: not-allowed;
 }
@@ -133,6 +133,7 @@ input[type="radio"] {
   justify-items: center;
   display: grid;
   overflow: hidden;
+  box-shadow: var(--input-shadow);
 }
 
 input[type="checkbox"]:where(:not([role="switch"]))::before,

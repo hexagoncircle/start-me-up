@@ -112,13 +112,13 @@ layout: "page"
         <!-- Date-->
         <div class="input-stack" style="flex: 1 0 225px">
           <label for="date">Date</label>
-          <input type="date" id="date" name="date" />
+          <input type="date" id="date" name="date" value="2023-11-23" />
         </div>
 
         <!-- Time-->
         <div class="input-stack" style="flex: 1 0 125px">
           <label for="time">Time</label>
-          <input type="time" id="time" name="time" />
+          <input type="time" id="time" name="time" value="20:30" />
         </div>
       </div>
 
