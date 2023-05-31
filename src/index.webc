@@ -43,7 +43,6 @@ layout: "page"
   </section>
 
   <h2 class="heading">Inline text elements</h2>
-
   <section class="section content stack">
     <p class="inline-wrap" style="--inline-wrap-align: baseline">
       <b>Bold</b>
