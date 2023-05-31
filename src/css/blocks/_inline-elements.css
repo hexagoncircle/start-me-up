@@ -1,0 +1,21 @@
+code,
+kbd {
+  font-size: 0.85em;
+  font-family: var(--font-family-monospace);
+  padding: 0.125rem 0.25rem;
+  position: relative;
+  top: -0.025em;
+  background-color: var(--color-surface-1);
+}
+
+mark {
+  border-radius: var(--radius-xs);
+  padding: 0.125rem 0.25rem;
+  background-color: var(--color-highlight);
+  border-radius: var(--radius-xs);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}

@@ -19,7 +19,7 @@
 @import "_utilities.css" layer(utilities);
 
 @import "blocks/_button.css" layer(blocks);
-@import "blocks/_code.css" layer(blocks);
+@import "blocks/_inline-elements.css" layer(blocks);
 @import "blocks/_input.css" layer(blocks);
 @import "blocks/_input.color.css" layer(blocks);
 @import "blocks/_input.file.css" layer(blocks);

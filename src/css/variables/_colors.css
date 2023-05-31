@@ -27,6 +27,7 @@
   --surface-3-dark: hsl(var(--brand-h) 8% 20%);
   --surface-4-dark: hsl(var(--brand-h) 8% 25%);
 
+  --color-highlight: #f7f716;
   --color-surface-invalid: #fdd5d5;
   --color-surface-success: #d2f6d4;
   --color-border-invalid: red;
