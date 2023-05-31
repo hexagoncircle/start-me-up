@@ -169,6 +169,7 @@ input[type="radio"] {
 input[type="radio"]::before {
   border-radius: inherit;
   background-color: var(--input-bg-checked);
+  box-shadow: 0 0 0 2px var(--input-color-icon-checked);
   transform: scale(0);
 }
 
