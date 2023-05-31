@@ -41,6 +41,29 @@ layout: "page"
       </small>
     </p>
   </section>
+
+  <h2 class="heading">Inline text elements</h2>
+
+  <section class="section content stack">
+    <p class="inline-wrap" style="--inline-wrap-align: baseline">
+      <b>Bold</b>
+      <strong>Strong</strong>
+      <i>Italic</i>
+      <em>Emphasis</em>
+      <s>Strikethrough</s>
+      <del>Deleted</del>
+      <ins>Inserted</ins>
+      <u>Underline</u>
+      <a href="#">Anchor</a>
+      <mark>Highlighted</mark>
+      <abbr title="Abbreviation">Abbr</abbr>
+      <code>Code</code>
+      <kbd>Keyboard Input</kbd>
+      <small>Small</small>
+      <span>Text<sub>Subscript</sub></span>
+      <span>Text<sup>Superscript</sup></span>
+    </p>
+  </section>
 </article>
 
 <article class="pancake breakout stack">
@@ -307,29 +330,6 @@ layout: "page"
       </div>
     </section>
   </form>
-</article>
-
-<article class="pancake breakout stack">
-  <h2 class="heading">Inline text elements</h2>
-
-  <p class="inline-wrap" style="--inline-wrap-align: baseline">
-    <b>Bold</b>
-    <strong>Strong</strong>
-    <i>Italic</i>
-    <em>Emphasis</em>
-    <s>Strikethrough</s>
-    <del>Deleted</del>
-    <ins>Inserted</ins>
-    <u>Underline</u>
-    <a href="#">Anchor</a>
-    <mark>Highlighted</mark>
-    <abbr title="Abbreviation">Abbr</abbr>
-    <code>Code</code>
-    <kbd>Keyboard Input</kbd>
-    <small>Small</small>
-    <span>Text<sub>Subscript</sub></span>
-    <span>Text<sup>Superscript</sup></span>
-  </p>
 </article>
 
 <article class="pancake breakout stack">
