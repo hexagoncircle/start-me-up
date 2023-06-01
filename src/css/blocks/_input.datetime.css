@@ -21,6 +21,16 @@
   }
 }
 
+@-moz-document url-prefix() {
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="time"],
+  [type="week"] {
+    background-image: none !important;
+  }
+}
+
 [type="time"] {
   background-image: var(--icon-time);
 }
