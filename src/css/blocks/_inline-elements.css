@@ -2,15 +2,16 @@ code,
 kbd {
   font-size: 0.85em;
   font-family: var(--font-family-monospace);
-  padding: 0.125rem 0.25rem;
+  padding: 0.25rem 0.4rem;
   position: relative;
-  top: -0.025em;
+  top: -0.05em;
   background-color: var(--color-surface-1);
+  border-radius: var(--radius-xs);
 }
 
 mark {
   border-radius: var(--radius-xs);
-  padding: 0.125rem 0.25rem;
+  padding-inline: 0.25rem;
   background-color: var(--color-highlight);
   border-radius: var(--radius-xs);
 }

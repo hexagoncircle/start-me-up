@@ -107,6 +107,8 @@ label {
   --input-color-text: var(--color-text-2);
   --input-shadow: none;
   cursor: not-allowed;
+  opacity: 1;
+  -webkit-text-fill-color: var(--input-color-text);
 }
 
 input[type="checkbox"],

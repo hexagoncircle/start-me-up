@@ -1,0 +1,26 @@
+:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+  --_offset: var(--input-padding);
+  --_icon-size: 1em;
+  padding-inline-end: calc(var(--_icon-size) + var(--_offset));
+  background-image: var(--icon-date);
+  background-position: center right var(--_offset);
+  background-size: var(--_icon-size) auto;
+  background-repeat: no-repeat;
+
+  &::-webkit-calendar-picker-indicator {
+    width: var(--_icon-size);
+    margin-inline-end: calc(var(--_icon-size) * -1);
+    margin-inline-start: var(--_offset);
+    opacity: 0;
+  }
+}
+
+[type="time"] {
+  background-image: var(--icon-time);
+}
