@@ -53,14 +53,6 @@ input:required + label:after {
   display: inline-grid;
 }
 
-select {
-  background-image: var(--icon-chevron);
-  background-repeat: no-repeat;
-  background-position: right 0.5em top 50%, 0 0;
-  background-size: 0.8em;
-  padding-inline-end: 1.75em;
-}
-
 fieldset {
   --inline-wrap-row-gap: var(--space-2xs);
   border: 0;
@@ -83,9 +75,25 @@ label {
   display: inline-block;
 }
 
+/* Inputs with icons */
+:where(input, textarea, select):is(
+    [aria-invalid="true"],
+    [aria-invalid="false"]
+  ),
+select {
+  background-repeat: no-repeat;
+  background-position: right 0.5em top 50%, 0 0;
+  background-size: 1em;
+  padding-inline-end: 1.75em;
+}
+
+select {
+  background-image: var(--icon-chevron);
+}
+
 :where(input, textarea, select)[aria-invalid="false"] {
   --input-border-color: var(--color-border-success);
-  --input-color-text: var(--color-text-success);
+  background-image: var(--icon-success);
 
   & + .hint {
     color: var(--color-text-success);
@@ -94,7 +102,7 @@ label {
 
 :where(input, textarea, select)[aria-invalid="true"] {
   --input-border-color: var(--color-border-invalid);
-  --input-color-text: var(--color-text-invalid);
+  background-image: var(--icon-invalid);
 
   & + .hint {
     color: var(--color-text-invalid);
