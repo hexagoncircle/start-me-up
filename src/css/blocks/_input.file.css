@@ -1,5 +1,6 @@
 input[type="file"] {
   --_offset: 3px;
+  --_gap: var(--space-xs);
   appearance: none;
   padding: var(--_offset);
   box-shadow: none;
@@ -8,6 +9,11 @@ input[type="file"] {
   cursor: pointer;
 
   &::file-selector-button {
-    margin-right: var(--space-xs);
+    margin-inline-end: var(--space-xs);
   }
+}
+
+[dir="rtl"] input[type="file"]::file-selector-button {
+  margin-inline-end: unset;
+  margin-inline-start: var(--space-xs);
 }

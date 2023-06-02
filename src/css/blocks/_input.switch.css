@@ -1,6 +1,7 @@
 input[type="checkbox"][role="switch"] {
   --_size: 1.5rem;
   --_offset: calc(var(--input-border-width) * 4);
+  --_on-position: var(--_size);
   appearance: none;
   position: relative;
   display: grid;
@@ -13,6 +14,10 @@ input[type="checkbox"][role="switch"] {
   border: var(--input-border-width) var(--input-border-style)
     var(--input-border-color);
   border-radius: var(--radius-pill);
+
+  [dir="rtl"] & {
+    --_on-position: calc(var(--_size) * -1);
+  }
 }
 
 input[type="checkbox"][role="switch"]:before {
@@ -31,8 +36,7 @@ input[type="checkbox"][role="switch"]:checked {
 }
 
 input[type="checkbox"][role="switch"]:checked:before {
-  -webkit-transform: translateX(var(--_size));
-  transform: translateX(var(--_size));
+  transform: translateX(var(--_on-position));
 }
 
 @media (prefers-reduced-motion: no-preference) {
