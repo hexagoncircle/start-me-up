@@ -11,10 +11,6 @@
   --input-shadow: var(--shadow-1);
 }
 
-input:-webkit-autofill {
-  font: inherit;
-}
-
 input:autofill {
   font: inherit;
 }
@@ -45,8 +41,8 @@ input:required + label:after {
   background-color: var(--input-bg);
   border-radius: var(--radius-xs);
   color: var(--input-color-text);
-  min-block-size: calc(
-    1rem * var(--font-line-height) + var(--input-padding) * 2 +
+  block-size: calc(
+    1em * var(--font-line-height) + var(--input-padding) * 2 +
       var(--input-border-width) * 2
   );
   box-shadow: var(--input-shadow);
