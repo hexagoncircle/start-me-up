@@ -50,7 +50,6 @@ input:required + label:after {
       var(--input-border-width) * 2
   );
   box-shadow: var(--input-shadow);
-  display: inline-grid;
 }
 
 fieldset {
