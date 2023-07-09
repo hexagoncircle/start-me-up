@@ -465,9 +465,11 @@ layout: "page"
     <div class="example-container center stack" style="--max: 50ch">
       <p class="text-2 heading">Hello, world.</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
-        Fugiat quia sapiente ea dolores a. Accusamus dolore a consectetur
-        corrupti voluptatibus nemo?
+        Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu
+        jelly beans. Candy topping sweet jujubes sweet roll croissant gummies.
+        Topping ice cream dessert tiramisu lollipop sesame snaps. Brownie
+        liquorice chocolate tootsie roll tart dessert wafer topping. Cheesecake
+        tart cotton candy tootsie roll wafer soufflé.
       </p>
       <button>Button</button>
     </div>
@@ -478,9 +480,11 @@ layout: "page"
     <div class="example-container center intrinsic stack" style="--max: 50ch">
       <p class="text-2 heading">Hello, world.</p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
-        Fugiat quia sapiente ea dolores a. Accusamus dolore a consectetur
-        corrupti voluptatibus nemo?
+        Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu
+        jelly beans. Candy topping sweet jujubes sweet roll croissant gummies.
+        Topping ice cream dessert tiramisu lollipop sesame snaps. Brownie
+        liquorice chocolate tootsie roll tart dessert wafer topping. Cheesecake
+        tart cotton candy tootsie roll wafer soufflé.
       </p>
       <button>Button</button>
     </div>
@@ -489,16 +493,15 @@ layout: "page"
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Cluster</h3>
     <div class="example-container cluster">
-      <div class="example-block">Element</div>
-      <div class="example-block">Element Element</div>
-      <div class="example-block">El</div>
-      <div class="example-block">Element</div>
-      <div class="example-block">Element</div>
-      <div class="example-block">El</div>
-      <div class="example-block">Element Element</div>
-      <div class="example-block">Element</div>
-      <div class="example-block">Ele</div>
-      <div class="example-block">Element</div>
+      <div class="example-block">Marshmallow</div>
+      <div class="example-block">Chocolate cake</div>
+      <div class="example-block">Caramels</div>
+      <div class="example-block">Powedered donut</div>
+      <div class="example-block">Apple pie biscuit</div>
+      <div class="example-block">Tiramisu</div>
+      <div class="example-block">Jelly beans</div>
+      <div class="example-block">Cotton candy croissant</div>
+      <div class="example-block">Sesame snaps</div>
     </div>
   </section>
 
@@ -536,7 +539,7 @@ layout: "page"
   </section>
 
   <section class="section stack" style="max-inline-size: 60ch">
-    <h3 class="heading">Sidebar + reverse</h3>
+    <h3 class="heading">Sidebar reverse</h3>
     <div
       class="example-container with-sidebar reverse"
       style="min-block-size: 10rem; --gap: var(--space-m); --min: 60%"
@@ -574,11 +577,11 @@ layout: "page"
   .example-block {
     padding: var(--space-m);
     text-align: center;
-    background-color: var(--color-surface-4);
+    background-color: var(--color-surface-1);
     border-radius: var(--radius-xs);
   }
 
   .example-block .example-block {
-    background-color: var(--color-surface-3);
+    background-color: var(--color-surface-4);
   }
 </style>
