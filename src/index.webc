@@ -448,7 +448,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 50ch">
     <h3 class="heading">Breakout</h3>
-    <div class="breakout stack" style="--max-inline-size: 65%">
+    <div class="breakout stack" style="--max: 65%">
       <div class="example-block">Content</div>
       <div class="popout example-block">Popout</div>
       <div class="example-block">Content</div>
@@ -467,7 +467,7 @@ layout: "page"
 
   <section class="section stack">
     <h3 class="heading">Center</h3>
-    <div class="center stack" style="--max-inline-size: 50ch">
+    <div class="center stack" style="--max: 50ch">
       <p class="text-2 heading">Hello, world.</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
@@ -480,7 +480,7 @@ layout: "page"
 
   <section class="section stack">
     <h3 class="heading">Center + intrinsic center</h3>
-    <div class="center intrinsic stack" style="--max-inline-size: 50ch">
+    <div class="center intrinsic stack" style="--max: 50ch">
       <p class="text-2 heading">Hello, world.</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
@@ -508,18 +508,40 @@ layout: "page"
   </section>
 
   <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Grid</h3>
+    <div class="grid" style="--min: 10rem">
+      <div class="example-block">1</div>
+      <div class="example-block">2</div>
+      <div class="example-block">3</div>
+      <div class="example-block">4</div>
+      <div class="example-block">5</div>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Flex grid</h3>
+    <div class="flex-grid" style="--min: 10rem">
+      <div class="example-block">1</div>
+      <div class="example-block">2</div>
+      <div class="example-block">3</div>
+      <div class="example-block">4</div>
+      <div class="example-block">5</div>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
     <h3 class="heading">Sidebar</h3>
     <div class="with-sidebar" style="--gap: var(--space-m)">
-      <div class="example-block" style="min-inline-size: 150px">Sidebar</div>
-      <div class="example-block">Content</div>
+      <div class="example-block" style="min-inline-size: 20ch">Sidebar</div>
+      <div class="example-block">Main</div>
     </div>
   </section>
 
   <section class="section stack" style="max-inline-size: 50ch">
     <h3 class="heading">Sidebar + reverse</h3>
     <div class="with-sidebar reverse" style="--gap: var(--space-m)">
-      <div class="example-block">Content</div>
-      <div class="example-block" style="min-inline-size: 150px">Sidebar</div>
+      <div class="example-block">Main</div>
+      <div class="example-block" style="min-inline-size: 20ch">Sidebar</div>
     </div>
   </section>
 

@@ -1,0 +1,22 @@
+/**
+ * The Grid
+ * @param --gap - Adjust the space between each element.
+ * @param --min - Smallest element inline size before it shifts to the next row.
+ * {@link https://smolcss.dev/#smol-css-grid}
+ * {@link https://smolcss.dev/#smol-flexbox-grid}
+ */
+.grid {
+  display: grid;
+  gap: var(--gap, var(--space-m));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--space-m));
+}
+
+.flex-grid > * {
+  flex: 1 1 var(--min, auto);
+}

@@ -1,14 +1,14 @@
 /**
  * The Center
- * @param --gutter - Adjust inline gutter padding for narrower viewports.
- * @param --max-inline-size - Set the maximum size the element can grow.
+ * @param --gutters - Adjust inline gutter spacing on either side for narrower viewports.
+ * @param --max - Set the container's widest inline size.
  * @class intrinsic - Center align elements based on their natural inline sizes.
  * {@link https://every-layout.dev/layouts/center/}
  */
 .center {
   margin-inline: auto;
-  padding-inline: var(--gutter);
-  inline-size: min(var(--max-inline-size, var(--page-max-inline-size)), 100%);
+  padding-inline: var(--gutters);
+  inline-size: min(var(--max, var(--page-max-inline-size)), 100%);
 }
 
 .center.intrinsic {

@@ -28,6 +28,7 @@
 @import "layouts/_layout.breakout.css" layer(composition);
 @import "layouts/_layout.center.css" layer(composition);
 @import "layouts/_layout.cluster.css" layer(composition);
+@import "layouts/_layout.grid.css" layer(composition);
 @import "layouts/_layout.stack.css" layer(composition);
 @import "layouts/_layout.sidebar.css" layer(composition);
 

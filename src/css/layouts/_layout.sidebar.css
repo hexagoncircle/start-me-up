@@ -1,7 +1,7 @@
 /**
  * The Sidebar
  * @param --gap - Add space between the sidebar and main container.
- * @param --min-inline-size - Stack elements when the main container falls below this size.
+ * @param --min - Stack elements when the main container falls below this inline size.
  * {@link https://every-layout.dev/layouts/sidebar/}
  */
 .with-sidebar {
@@ -19,5 +19,5 @@
 .with-sidebar.reverse > :first-child {
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: var(--min-inline-size, 50%);
+  min-inline-size: var(--min, 50%);
 }

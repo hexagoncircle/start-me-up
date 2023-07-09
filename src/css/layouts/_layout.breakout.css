@@ -1,12 +1,12 @@
 /**
  * The Breakout
- * @param --max-inline-size - Set the maximum size the element can grow.
+ * @param --max - Set the maximum size of the content column.
  * {@link https://ryanmulligan.dev/blog/layout-breakouts/}
  */
 .breakout {
   --_full: minmax(var(--page-padding), 1fr);
   --_content: min(
-    var(--max-inline-size, var(--page-max-inline-size)),
+    var(--max, var(--page-max-inline-size)),
     100% - var(--page-padding) * 2
   );
   --_popout: minmax(0, 2rem);
