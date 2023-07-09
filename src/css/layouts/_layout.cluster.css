@@ -1,0 +1,17 @@
+/**
+ * The Cluster
+ * @param --gap - Override the default gap.
+ * @param --row-gap - Set a custom row gap.
+ * @param --column-gap - Set a custom column gap.
+ * @param --align - Set the flexbox vertical alignment.
+ * @param --justify - Set the flexbox horizontal alignment.
+ * {@link https://every-layout.dev/layouts/cluster/}
+ */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, var(--row-gap, var(--space-m)))
+    var(--gap, var(--column-gap, var(--space-m)));
+  align-items: var(--align, center);
+  justify-content: var(--justify, flex-start);
+}

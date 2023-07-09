@@ -1,0 +1,41 @@
+/**
+ * The Breakout
+ * @param --max-inline-size - Set the maximum size the element can grow.
+ * {@link https://ryanmulligan.dev/blog/layout-breakouts/}
+ */
+.breakout {
+  --_full: minmax(var(--page-padding), 1fr);
+  --_content: min(
+    var(--max-inline-size, var(--page-max-inline-size)),
+    100% - var(--page-padding) * 2
+  );
+  --_popout: minmax(0, 2rem);
+  --_feature: minmax(0, 5rem);
+
+  display: grid;
+  place-content: start;
+  grid-template-columns:
+    [full-start] var(--_full)
+    [feature-start] var(--_feature)
+    [popout-start] var(--_popout)
+    [content-start] var(--_content) [content-end]
+    var(--_popout) [popout-end]
+    var(--_feature) [feature-end]
+    var(--_full) [full-end];
+}
+
+.breakout > * {
+  grid-column: content;
+}
+
+.breakout .popout {
+  grid-column: popout;
+}
+
+.breakout .feature {
+  grid-column: feature;
+}
+
+.breakout .full {
+  grid-column: full;
+}

@@ -1,0 +1,19 @@
+/**
+ * The Stack
+ * @param --space - Override the default stack spacing.
+ * {@link https://every-layout.dev/layouts/stack/}
+ * @class flex - Set flexbox display on stack to unlock auto margin spacing.
+ */
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, var(--space-m));
+}
+
+.stack.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
