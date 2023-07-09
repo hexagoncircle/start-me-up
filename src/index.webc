@@ -448,7 +448,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 50ch">
     <h3 class="heading">Breakout</h3>
-    <div class="breakout stack" style="--max-inline-size: 30ch">
+    <div class="breakout stack" style="--max-inline-size: 65%">
       <div class="example-block">Content</div>
       <div class="popout example-block">Popout</div>
       <div class="example-block">Content</div>
@@ -502,7 +502,7 @@ layout: "page"
       <div class="example-block">El</div>
       <div class="example-block">Element Element</div>
       <div class="example-block">Element</div>
-      <div class="example-block">El</div>
+      <div class="example-block">Ele</div>
       <div class="example-block">Element</div>
     </div>
   </section>
@@ -535,6 +535,7 @@ layout: "page"
         <p>Element</p>
         <div class="example-block">Child Element</div>
         <div class="example-block">Child Element</div>
+        <div class="example-block">Child Element</div>
       </div>
       <div class="example-block">Element</div>
     </div>
@@ -542,13 +543,13 @@ layout: "page"
 </article>
 <style>
   .example-block {
-    padding: var(--space-s);
+    padding: var(--space-m);
     text-align: center;
     background-color: var(--color-surface-4);
     border-radius: var(--radius-xs);
   }
 
   .example-block .example-block {
-    border: 2px dashed var(--color-surface-2);
+    background-color: var(--color-surface-3);
   }
 </style>
