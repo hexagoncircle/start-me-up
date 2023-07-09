@@ -3,14 +3,14 @@ layout: base
 ---
 
 <header class="page-header breakout">
-  <p class="inline-max">
+  <p class="center">
     <small>start-me-up</small>
     <small>version: <code @text="pkg.version"></code></small>
   </p>
 </header>
 <main class="page-content" @raw="content"></main>
 <footer class="page-footer breakout">
-  <section class="inline-wrap" style="--inline-wrap-justify: space-between">
+  <section class="cluster" style="--justify: space-between">
     <p><small>Made with ❤️ in 2023 by Ryan Mulligan</small></p>
     <color-schemer></color-schemer>
   </section>

@@ -2,9 +2,12 @@
 layout: "page"
 ---
 
-<article class="pancake breakout stack">
-  <h2 class="heading">Headings</h2>
-  <section class="section stack">
+<h1 class="visually-hidden">Preview</h1>
+
+<article class="breakout pancake">
+  <section class="section content stack">
+    <h2 class="heading">Headings</h2>
+
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
@@ -12,8 +15,9 @@ layout: "page"
     <h5>Heading 5</h5>
   </section>
 
-  <h2 class="heading">Paragraphs</h2>
   <section class="section content stack">
+    <h2 class="heading">Paragraphs</h2>
+
     <p>
       Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu jelly
       beans. Candy topping sweet jujubes sweet roll croissant gummies. Topping
@@ -42,9 +46,9 @@ layout: "page"
     </p>
   </section>
 
-  <h2 class="heading">Inline text elements</h2>
   <section class="section content stack">
-    <p class="inline-wrap" style="--inline-wrap-align: baseline">
+    <h2 class="heading">Inline text elements</h2>
+    <p class="cluster" style="--align: baseline">
       <b>Bold</b>
       <strong>Strong</strong>
       <i>Italic</i>
@@ -65,9 +69,9 @@ layout: "page"
   </section>
 </article>
 
-<article class="pancake breakout stack">
-  <h2 class="heading">Form inputs</h2>
+<article class="breakout pancake">
   <form class="stack" style="max-inline-size: 50ch">
+    <h2 class="heading">Form inputs</h2>
     <section class="section stack">
       <!-- Text -->
       <div class="input-stack">
@@ -130,7 +134,7 @@ layout: "page"
         />
       </div>
 
-      <div class="inline-wrap">
+      <div class="cluster">
         <!-- Date-->
         <div class="input-stack" style="flex: 1 0 225px">
           <label for="date">Date</label>
@@ -218,7 +222,7 @@ layout: "page"
       </fieldset>
 
       <!-- Inline form controls -->
-      <fieldset class="inline-wrap">
+      <fieldset class="cluster">
         <legend>Inline checkboxes</legend>
         <div class="input-group">
           <input
@@ -294,14 +298,14 @@ layout: "page"
     <section class="section stack">
       <!-- Input buttons -->
       <h3>Input buttons</h3>
-      <div class="inline-wrap">
+      <div class="cluster">
         <input type="reset" value="Reset" />
         <input type="submit" data-variant="primary" value="Submit" />
       </div>
 
       <!-- Buttons -->
-      <h3 style="--stack-space: var(--space-l)">Button variants</h3>
-      <div class="inline-wrap">
+      <h3 style="--space: var(--space-l)">Button variants</h3>
+      <div class="cluster">
         <button onclick="event.preventDefault()">Default</button>
         <button data-variant="primary" onclick="event.preventDefault()">
           Primary
@@ -331,102 +335,220 @@ layout: "page"
   </form>
 </article>
 
-<article class="pancake breakout stack">
-  <h2 class="heading">Table</h2>
-  <p>
-    Tables wrapped in a <code>figure</code> tag will allow any overflow to
-    scroll horizontally.
-  </p>
-  <figure>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">Bronze</th>
-          <th scope="col">Silver</th>
-          <th scope="col">Gold</th>
-          <th scope="col">Platinum</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Feature one</th>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <th scope="row">Feature two</th>
-          <td></td>
-          <td>✅</td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <th scope="row">Feature three</th>
-          <td></td>
-          <td></td>
-          <td>✅</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <th scope="row">Feature four</th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>✅</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th scope="row">Total features</th>
-          <td scope="col">1</td>
-          <td scope="col">2</td>
-          <td scope="col">3</td>
-          <td scope="col">4</td>
-        </tr>
-      </tfoot>
-    </table>
-  </figure>
+<article class="breakout pancake">
+  <section class="stack">
+    <h2 class="heading">Table</h2>
+    <p>
+      Tables wrapped in a <code>figure</code> tag will allow any overflow to
+      scroll horizontally.
+    </p>
+    <figure>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Bronze</th>
+            <th scope="col">Silver</th>
+            <th scope="col">Gold</th>
+            <th scope="col">Platinum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Feature one</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row">Feature two</th>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row">Feature three</th>
+            <td></td>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th scope="row">Feature four</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✅</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">Total features</th>
+            <td scope="col">1</td>
+            <td scope="col">2</td>
+            <td scope="col">3</td>
+            <td scope="col">4</td>
+          </tr>
+        </tfoot>
+      </table>
+    </figure>
 
-  <h3 style="--stack-space: var(--space-l)">Table with row striping</h3>
-  <figure>
-    <table role="grid" style="--table-cell-min-inline-size: 225px">
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          <th scope="col">Everyday</th>
-          <th scope="col">Seasonal</th>
-          <th scope="col">Specialty</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Starters</th>
-          <td>Butter croissant</td>
-          <td>Chocolate cake</td>
-          <td>Sugar bonbon</td>
-        </tr>
-        <tr>
-          <th scope="row">Main course</th>
-          <td>Rainbow macaron</td>
-          <td>Carrot cake</td>
-          <td>Apple pie biscuit</td>
-        </tr>
-        <tr>
-          <th scope="row">Dessert</th>
-          <td>Powedered donut</td>
-          <td>Sugar plum cake</td>
-          <td>Gingerbread cookie</td>
-        </tr>
-        <tr>
-          <th scope="row">Dessert+</th>
-          <td>Sesame snaps</td>
-          <td>Cotton candy croissant</td>
-          <td>Sweet jelly ice cream</td>
-        </tr>
-      </tbody>
-    </table>
-  </figure>
+    <h3>Table with row striping</h3>
+    <figure>
+      <table role="grid" style="--table-cell-min-inline-size: 225px">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Everyday</th>
+            <th scope="col">Seasonal</th>
+            <th scope="col">Specialty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Starters</th>
+            <td>Butter croissant</td>
+            <td>Chocolate cake</td>
+            <td>Sugar bonbon</td>
+          </tr>
+          <tr>
+            <th scope="row">Main course</th>
+            <td>Rainbow macaron</td>
+            <td>Carrot cake</td>
+            <td>Apple pie biscuit</td>
+          </tr>
+          <tr>
+            <th scope="row">Dessert</th>
+            <td>Powedered donut</td>
+            <td>Sugar plum cake</td>
+            <td>Gingerbread cookie</td>
+          </tr>
+          <tr>
+            <th scope="row">Dessert+</th>
+            <td>Sesame snaps</td>
+            <td>Cotton candy croissant</td>
+            <td>Sweet jelly ice cream</td>
+          </tr>
+        </tbody>
+      </table>
+    </figure>
+  </section>
 </article>
+
+<article class="breakout pancake">
+  <section class="section stack">
+    <h2 class="heading">Layouts</h2>
+    <p>
+      Common layouts that can be applied with a single class selector. Some of
+      them can be extended with an additional selector.
+    </p>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Breakout</h3>
+    <div class="breakout stack" style="--max-inline-size: 30ch">
+      <div class="example-block">Content</div>
+      <div class="popout example-block">Popout</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+      <div class="feature example-block">Feature</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+      <div class="full example-block">Full</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+      <div class="example-block">Content</div>
+    </div>
+  </section>
+
+  <section class="section stack">
+    <h3 class="heading">Center</h3>
+    <div class="center stack" style="--max-inline-size: 50ch">
+      <p class="text-2 heading">Hello, world.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
+        Fugiat quia sapiente ea dolores a. Accusamus dolore a consectetur
+        corrupti voluptatibus nemo?
+      </p>
+      <button>Button</button>
+    </div>
+  </section>
+
+  <section class="section stack">
+    <h3 class="heading">Center + intrinsic center</h3>
+    <div class="center intrinsic stack" style="--max-inline-size: 50ch">
+      <p class="text-2 heading">Hello, world.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ut?
+        Fugiat quia sapiente ea dolores a. Accusamus dolore a consectetur
+        corrupti voluptatibus nemo?
+      </p>
+      <button>Button</button>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Cluster</h3>
+    <div class="cluster">
+      <div class="example-block">Element</div>
+      <div class="example-block">Element Element</div>
+      <div class="example-block">El</div>
+      <div class="example-block">Element</div>
+      <div class="example-block">Element</div>
+      <div class="example-block">El</div>
+      <div class="example-block">Element Element</div>
+      <div class="example-block">Element</div>
+      <div class="example-block">El</div>
+      <div class="example-block">Element</div>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Sidebar</h3>
+    <div class="with-sidebar" style="--gap: var(--space-m)">
+      <div class="example-block" style="min-inline-size: 150px">Sidebar</div>
+      <div class="example-block">Content</div>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Sidebar + reverse</h3>
+    <div class="with-sidebar reverse" style="--gap: var(--space-m)">
+      <div class="example-block">Content</div>
+      <div class="example-block" style="min-inline-size: 150px">Sidebar</div>
+    </div>
+  </section>
+
+  <section class="section stack" style="max-inline-size: 50ch">
+    <h3 class="heading">Stack</h3>
+    <div class="stack">
+      <div class="example-block">Element</div>
+      <div class="example-block">Element</div>
+      <div class="example-block" style="--space: var(--space-l)">
+        Element <code>--space: var(--space-l)</code>
+      </div>
+      <div class="example-block stack">
+        <p>Element</p>
+        <div class="example-block">Child Element</div>
+        <div class="example-block">Child Element</div>
+      </div>
+      <div class="example-block">Element</div>
+    </div>
+  </section>
+</article>
+<style>
+  .example-block {
+    padding: var(--space-s);
+    text-align: center;
+    background-color: var(--color-surface-4);
+    border-radius: var(--radius-xs);
+  }
+
+  .example-block .example-block {
+    border: 2px dashed var(--color-surface-2);
+  }
+</style>

@@ -1,0 +1,73 @@
+:where(html) {
+  --table-border-width: 1px;
+  --table-border-color: var(--color-surface-4);
+  --table-border-style: solid;
+  --table-surface: var(--color-surface-2);
+  --table-surface-alt: var(--color-surface-1);
+  --table-text-align: start;
+  --table-cell-min-inline-size: 125px;
+  --table-header-min-inline-size: var(--table-cell-min-inline-size);
+  --table-layout: initial;
+}
+
+figure:has(table) {
+  --_push: var(--page-padding);
+  --_pull: calc(var(--_push) * -1);
+  display: flex;
+  overscroll-behavior-x: contain;
+  overflow-x: auto;
+  margin-block-end: var(--_pull);
+  margin-inline: var(--_pull);
+  padding-block-end: var(--_push);
+  padding-inline: var(--_push);
+}
+
+:where(table) {
+  inline-size: 100%;
+  border-spacing: 0;
+  text-indent: 0;
+  border: var(--table-border-width) var(--table-border-style)
+    var(--table-border-color);
+  border-radius: inherit;
+  table-layout: var(--table-layout);
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-s);
+  background-color: var(--table-surface);
+}
+
+th,
+td {
+  padding: var(--space-s);
+  text-align: var(--table-text-align);
+}
+
+th {
+  min-inline-size: var(--table-header-min-inline-size);
+}
+
+td {
+  min-inline-size: var(--table-cell-min-inline-size);
+}
+
+:where(table:not([role="grid"])) {
+  & th,
+  & td {
+    border-block-end: var(--table-border-width) var(--table-border-style)
+      var(--table-border-color);
+  }
+}
+
+tfoot th,
+tfoot td {
+  border-block-end: unset;
+}
+
+:where(table:not([role="grid"])) td {
+  min-inline-size: var(--table-cell-min-inline-size);
+  border-inline-start: var(--table-border-width) var(--table-border-style)
+    var(--table-border-color);
+}
+
+table[role="grid"] tbody tr:nth-child(2n + 1) {
+  background-color: var(--table-surface-alt);
+}
