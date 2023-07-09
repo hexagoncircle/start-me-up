@@ -577,11 +577,11 @@ layout: "page"
   .example-block {
     padding: var(--space-m);
     text-align: center;
-    background-color: var(--color-surface-1);
+    background-color: var(--color-surface-4);
     border-radius: var(--radius-xs);
   }
 
   .example-block .example-block {
-    background-color: var(--color-surface-4);
+    background-color: var(--color-surface-3);
   }
 </style>
