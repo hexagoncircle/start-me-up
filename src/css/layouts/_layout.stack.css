@@ -1,8 +1,8 @@
 /**
  * Stack
  * @cssprop --space - Override the default stack spacing.
- * {@link https://every-layout.dev/layouts/stack/}
  * @selector .flex - Set flexbox display on stack to unlock auto margin spacing.
+ * {@link https://every-layout.dev/layouts/stack/}
  */
 .stack > * {
   margin-block: 0;

@@ -571,7 +571,7 @@ layout: "page"
   .example-container {
     border: 1px dashed var(--color-text-1);
     resize: horizontal;
-    overflow: scroll;
+    overflow: auto;
   }
 
   .example-block {
