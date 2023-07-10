@@ -6,7 +6,8 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "tw": "postcss src/css/_tailwind.css -o _site/css/utilities.css"
   },
   "keywords": [],
   "author": {
@@ -19,9 +20,14 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "autoprefixer": "^10.4.14",
     "browserslist": "^4.21.5",
     "lightningcss": "^1.20.0",
-    "svgo": "^3.0.2"
+    "postcss": "^8.4.25",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "svgo": "^3.0.2",
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-bundle": "^1.0.4",
