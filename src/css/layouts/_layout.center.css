@@ -1,8 +1,8 @@
 /**
  * Center
- * @param --gutters - Adjust inline gutter spacing on either side for narrower viewports.
- * @param --max - Set the container's widest inline size.
- * @class intrinsic - Center align elements based on their natural inline sizes.
+ * @cssprop --gutters - Adjust inline gutter spacing on either side for narrower viewports.
+ * @cssprop --max - Set the container's widest inline size.
+ * @selector .intrinsic - Center align elements based on their natural inline sizes.
  * {@link https://every-layout.dev/layouts/center/}
  */
 .center {

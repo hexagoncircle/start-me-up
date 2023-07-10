@@ -1,6 +1,6 @@
 /**
  * Breakout
- * @param --max - Set the maximum size of the content column.
+ * @cssprop --max - Set the maximum size of the content column.
  * {@link https://ryanmulligan.dev/blog/layout-breakouts/}
  */
 .breakout {
