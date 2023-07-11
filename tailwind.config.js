@@ -6,7 +6,10 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      white: "#ffffff",
+      white: {
+        100: "#ffffff",
+        200: "#f3f3f3",
+      },
       purple: "#3f3cbb",
       midnight: "#121063",
       metal: "#565584",
@@ -34,13 +37,11 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addUtilities, theme }) {
-      function extractVars(obj, prefix, group = "") {
+      function extractVars(obj, prefix) {
         return Object.keys(obj).reduce((vars, key) => {
           const value = obj[key];
           const cssVariable =
-            key === "DEFAULT"
-              ? `--${prefix}${group}`
-              : `--${prefix}${group}-${key}`;
+            key === "DEFAULT" ? `--${prefix}` : `--${prefix}-${key}`;
 
           const newVars =
             typeof value === "string"
@@ -53,7 +54,7 @@ module.exports = {
 
       addUtilities({
         ":root": {
-          ...extractVars(theme("colors"), "color"),
+          ...extractVars(theme("colors"), "color", "cool"),
           ...extractVars(theme("spacing"), "space"),
         },
       });
