@@ -1,4 +1,4 @@
-@mixin button {
+@define-mixin button {
   & {
     --_icon-size: 1.25em;
     appearance: none;
@@ -27,11 +27,11 @@
 }
 
 :where(button, input[type="submit"], input[type="reset"], .button) {
-  @apply button;
+  @mixin button;
 }
 
 input[type="file"]::file-selector-button {
-  @apply button;
+  @mixin button;
 }
 
 :where(

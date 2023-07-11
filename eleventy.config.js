@@ -1,11 +1,13 @@
-const path = require("node:path");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const { bundle, transform } = require("lightningcss");
-const { Buffer } = require("node:buffer");
 const filters = require("./utils/filters");
 const shortcodes = require("./utils/shortcodes");
-const lightningCssConfig = require("./utils/lightning-css-config");
+const tailwind = require("tailwindcss");
+const postcss = require("postcss");
+const postcssImport = require("postcss-import");
+const postcssMixins = require("postcss-mixins");
+
+const postcssPlugins = [tailwind, postcssImport, postcssMixins];
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginWebc, {
@@ -16,12 +18,13 @@ module.exports = (eleventyConfig) => {
     transforms: [
       async function (content) {
         if (this.type === "css") {
-          let { code } = transform({
-            ...lightningCssConfig,
-            code: Buffer.from(content),
+          let result = await postcss(postcssPlugins).process(content, {
+            from: this.page.inputPath,
+            to: null,
           });
-          return code;
+          return result.css;
         }
+
         return content;
       },
     ],
@@ -30,18 +33,17 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
     outputFileExtension: "css",
-    compile: async function (_inputContent, inputPath) {
-      let parsed = path.parse(inputPath);
-      if (parsed.name.startsWith("_")) {
+    compile: async function (inputContent, inputPath) {
+      if (inputPath !== "./src/css/global.css") {
         return;
       }
 
       return async () => {
-        let { code } = bundle({
-          ...lightningCssConfig,
-          filename: inputPath,
+        let output = await postcss(postcssPlugins).process(inputContent, {
+          from: inputPath,
         });
-        return code;
+
+        return output.css;
       };
     },
   });

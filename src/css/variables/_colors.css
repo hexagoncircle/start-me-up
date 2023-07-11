@@ -37,7 +37,7 @@
   --color-text-success: #02ac02;
 }
 
-@mixin color-scheme-light {
+@define-mixin color-scheme-light {
   & {
     color-scheme: light;
     --color-brand-1: var(--brand-1-light);
@@ -60,7 +60,7 @@
   }
 }
 
-@mixin color-scheme-dark {
+@define-mixin color-scheme-dark {
   & {
     color-scheme: dark;
     --color-brand-1: var(--brand-1-dark);
@@ -82,15 +82,15 @@
 }
 
 :where(html, .theme-light) {
-  @apply color-scheme-light;
+  @mixin color-scheme-light;
 }
 
 :where(.theme-dark) {
-  @apply color-scheme-dark;
+  @mixin color-scheme-dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :where(html:not(.theme-light)) {
-    @apply color-scheme-dark;
+    @mixin color-scheme-dark;
   }
 }

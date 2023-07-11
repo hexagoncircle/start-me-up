@@ -448,7 +448,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Breakout</h3>
-    <div class="example-container breakout stack" style="--max: 65%">
+    <div class="example-container resize-x breakout stack" style="--max: 65%">
       <div class="example-block">Content</div>
       <div class="popout example-block">Popout</div>
       <div class="example-block">Content</div>
@@ -462,7 +462,7 @@ layout: "page"
 
   <section class="section stack">
     <h3 class="heading">Center</h3>
-    <div class="example-container center stack" style="--max: 50ch">
+    <div class="example-container resize-x center stack" style="--max: 50ch">
       <p class="text-2 heading">Hello, world.</p>
       <p>
         Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu
@@ -477,7 +477,10 @@ layout: "page"
 
   <section class="section stack">
     <h3 class="heading">Center + intrinsic center</h3>
-    <div class="example-container center intrinsic stack" style="--max: 50ch">
+    <div
+      class="example-container resize-x center intrinsic stack"
+      style="--max: 50ch"
+    >
       <p class="text-2 heading">Hello, world.</p>
       <p>
         Marshmallow chocolate cake caramels dessert jujubes dragée tiramisu
@@ -492,7 +495,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Cluster</h3>
-    <div class="example-container cluster">
+    <div class="example-container resize-x cluster">
       <div class="example-block">Marshmallow</div>
       <div class="example-block">Chocolate cake</div>
       <div class="example-block">Caramels</div>
@@ -507,7 +510,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Grid</h3>
-    <div class="example-container grid" style="--min: 12rem">
+    <div class="example-container resize-x grid" style="--min: 12rem">
       <div class="example-block">1</div>
       <div class="example-block">2</div>
       <div class="example-block">3</div>
@@ -518,7 +521,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Flex grid</h3>
-    <div class="example-container flex-grid" style="--min: 12rem">
+    <div class="example-container resize-x flex-grid" style="--min: 12rem">
       <div class="example-block">1</div>
       <div class="example-block">2</div>
       <div class="example-block">3</div>
@@ -530,7 +533,7 @@ layout: "page"
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Sidebar</h3>
     <div
-      class="example-container with-sidebar"
+      class="example-container resize-x with-sidebar"
       style="min-block-size: 10rem; --gap: var(--space-m); --min: 60%"
     >
       <div class="example-block" style="min-inline-size: 20ch">Sidebar</div>
@@ -541,7 +544,7 @@ layout: "page"
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Sidebar reverse</h3>
     <div
-      class="example-container with-sidebar reverse"
+      class="example-container resize-x with-sidebar reverse"
       style="min-block-size: 10rem; --gap: var(--space-m); --min: 60%"
     >
       <div class="example-block">Main</div>
@@ -551,7 +554,7 @@ layout: "page"
 
   <section class="section stack" style="max-inline-size: 60ch">
     <h3 class="heading">Stack</h3>
-    <div class="example-container stack">
+    <div class="example-container resize-x stack">
       <div class="example-block">Element</div>
       <div class="example-block">Element</div>
       <div class="example-block" style="--space: var(--space-l)">
@@ -570,7 +573,6 @@ layout: "page"
 <style>
   .example-container {
     border: 1px dashed var(--color-text-1);
-    resize: horizontal;
     overflow: auto;
   }
 

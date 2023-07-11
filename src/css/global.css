@@ -33,3 +33,5 @@
 @import "layouts/_layout.sidebar.css" layer(composition);
 
 @import "_utilities.css" layer(utilities);
+
+@tailwind utilities;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html :lang="metadata.language">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,6 @@
     <meta name="twitter:image" :content="metadataOGImage(ogImage)" />
 
     <link webc:keep rel="stylesheet" href="/css/global.css" />
-    <link webc:keep rel="stylesheet" href="/css/utilities.css" />
     <style @raw="getCss(page.url)" webc:keep></style>
     <script webc:keep @raw="getBundle('js', 'head')"></script>
   </head>

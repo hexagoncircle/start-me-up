@@ -3,7 +3,7 @@ layout: base
 ---
 
 <header class="page-header breakout">
-  <p class="center">
+  <p class="center bg-midnight text-tahiti">
     <small>start-me-up</small>
     <small>version: <code @text="pkg.version"></code></small>
   </p>
