@@ -15,7 +15,7 @@
     },
     "danger": { "value": "{color.base.red.value}" },
     "error": { "value": "{color.danger.value}" },
-    "background": {
+    "bg": {
       "primary": { "value": "{color.base.neutral.light.100.value}" },
       "secondary": { "value": "{color.base.neutral.light.100.value}" }
     },

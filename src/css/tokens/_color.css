@@ -1,13 +1,13 @@
 /**
  * Do not edit directly
- * Generated on Mon, 17 Jul 2023 04:55:29 GMT
+ * Generated on Mon, 17 Jul 2023 04:57:06 GMT
  */
 
 :root {
   --color-danger: #ff0000;
   --color-error: #ff0000;
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #ffffff;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #ffffff;
   --color-text-primary: #000000;
   --color-text-secondary: #111111;
 }
