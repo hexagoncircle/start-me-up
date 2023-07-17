@@ -2,6 +2,7 @@
  * Generate CSS custom properties from tailwind config using style dictionary
  * {@link https://dev.to/philw_/using-style-dictionary-to-transform-tailwind-config-into-scss-variables-css-custom-properties-and-javascript-via-design-tokens-24h5#getting-tailwind-config-data-into-the-right-format-for-style-dictionary}
  */
+const StyleDictionary = require("style-dictionary");
 const resolveConfig = require("tailwindcss/resolveConfig");
 const tailwindConfig = require("./tailwind.config.js");
 const _ = require("lodash");
@@ -75,35 +76,73 @@ _.forEach(theme, function (value, key) {
   }
 });
 
+/**
+ * This function will wrap a built-in format and replace `.value` with `.darkValue`
+ * if a token has a `.darkValue`.
+ * @param {String} format - the name of the built-in format
+ * @returns {Function}
+ */
+function darkFormatWrapper(format) {
+  return function (args) {
+    const dictionary = Object.assign({}, args.dictionary);
+
+    // Override each token's `value` with `darkValue`
+    dictionary.allProperties = dictionary.allProperties.map((token) => {
+      const { darkValue } = token;
+      if (darkValue) {
+        return Object.assign({}, token, {
+          value: token.darkValue,
+        });
+      } else {
+        return token;
+      }
+    });
+
+    // Use the built-in format but with our customized dictionary object
+    // so it will output the darkValue instead of the value
+    return StyleDictionary.format[format]({ ...args, dictionary });
+  };
+}
+
 const categories = ["color", "size"];
 
+const filesConfig = categories.map((category) => ({
+  destination: `tokens/_${category}.css`,
+  format: "css/variables",
+  filter: (token) => {
+    if (token.attributes.category === category) {
+      return token.attributes.type !== "base" ? token : null;
+    }
+  },
+}));
+
+const filesConfigDark = categories.map((category) => ({
+  destination: `tokens/_${category}.dark.css`,
+  format: "cssDark",
+  filter: (token) => {
+    if (
+      token.attributes.category === category &&
+      token.darkValue &&
+      token.attributes.category === `color`
+    ) {
+      return token.attributes.type !== "base" ? token : null;
+    }
+  },
+  options: {
+    selector: "[data-theme='dark']",
+  },
+}));
+
 module.exports = {
-  // tokens,
+  format: {
+    cssDark: darkFormatWrapper(`css/variables`),
+  },
   source: [`./src/_tokens/**/*.json`],
   platforms: {
     css: {
       transformGroup: "css",
       buildPath: "src/css/",
-      files: categories.map((category) => ({
-        destination: `tokens/_${category}.css`,
-        format: "css/variables",
-        filter: (token) => {
-          if (token.attributes.category === category) {
-            return token.attributes.type !== "base" ? token : null;
-          }
-        },
-        // options: {
-        //   outputReferences: true,
-        // },
-      })),
-      // Use tailwind config
-      // files: [
-      //   {
-      //     format: "css/variables",
-      //     destination: "_variables.css",
-      //     filter: (token) => categories.includes(token.attributes.category),
-      //   },
-      // ],
+      files: [...filesConfig, ...filesConfigDark],
     },
   },
 };

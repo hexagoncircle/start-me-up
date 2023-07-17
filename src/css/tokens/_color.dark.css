@@ -3,9 +3,7 @@
  * Generated on Mon, 17 Jul 2023 14:14:22 GMT
  */
 
-:root {
-  --color-danger: #ff0000;
-  --color-error: #ff0000;
+[data-theme='dark'] {
   --color-bg-primary: #000000;
   --color-bg-secondary: #111111;
   --color-text-primary: #000000;
