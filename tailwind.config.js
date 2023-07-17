@@ -1,5 +1,3 @@
-const plugin = require("tailwindcss/plugin");
-
 module.exports = {
   content: ["./src/**/*.webc"],
   theme: {
@@ -18,8 +16,18 @@ module.exports = {
       "bubble-gum": "#ff77e9",
       bermuda: "#78dcca",
     },
-    backgroundColor: ({ theme }) => theme("colors"),
-    textColor: ({ theme }) => theme("colors"),
+    colorBg: ({ theme }) => {
+      return {
+        1: theme("colors").white[100],
+        2: theme("colors").white[200],
+      };
+    },
+    colorText: ({ theme }) => {
+      return {
+        1: theme("colors").bermuda,
+        2: theme("colors").silver,
+      };
+    },
     fontFamily: {
       sans: ["system-ui", "sans-serif"],
       serif: ["Georgia", "serif"],
@@ -34,30 +42,6 @@ module.exports = {
       "2xl": "6rem",
       "3xl": "8rem",
     },
+    space: ({ theme }) => theme("spacing"),
   },
-  plugins: [
-    plugin(function ({ addUtilities, theme }) {
-      function extractVars(obj, prefix) {
-        return Object.keys(obj).reduce((vars, key) => {
-          const value = obj[key];
-          const cssVariable =
-            key === "DEFAULT" ? `--${prefix}` : `--${prefix}-${key}`;
-
-          const newVars =
-            typeof value === "string"
-              ? { [cssVariable]: value }
-              : extractVars(value, `-${key}`, prefix);
-
-          return { ...vars, ...newVars };
-        }, {});
-      }
-
-      addUtilities({
-        ":root": {
-          ...extractVars(theme("colors"), "color", "cool"),
-          ...extractVars(theme("spacing"), "space"),
-        },
-      });
-    }),
-  ],
 };
