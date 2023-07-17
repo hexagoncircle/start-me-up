@@ -20,6 +20,7 @@ module.exports = {
       return {
         1: theme("colors").white[100],
         2: theme("colors").white[200],
+        success: theme("colors")["bubble-gum"],
       };
     },
     colorText: ({ theme }) => {

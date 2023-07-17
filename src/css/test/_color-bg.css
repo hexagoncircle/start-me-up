@@ -1,11 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Mon, 17 Jul 2023 02:09:17 GMT
+ * Generated on Mon, 17 Jul 2023 02:23:49 GMT
  */
 
 :root {
   --color-bg-1: #ffffff;
   --color-bg-2: #f3f3f3;
+  --color-bg-success: #ff77e9;
   --color-text-1: #78dcca;
   --color-text-2: #ecebff;
   --font-family-sans: system-ui,sans-serif;

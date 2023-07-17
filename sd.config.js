@@ -7,7 +7,7 @@ const tailwindConfig = require("./tailwind.config.js");
 const _ = require("lodash");
 
 // Set the token categories that will appear in the CSS output.
-const categories = ["colorBg", "colorText", "space", "fontFamily"];
+// const categories = ["colorBg", "colorText", "space", "fontFamily"];
 
 // Grab just the theme data from the Tailwind config.
 const { theme } = resolveConfig(tailwindConfig);
@@ -25,14 +25,6 @@ const addToTokensObject = function (position, value) {
 
 // Loop over the theme data…
 _.forEach(theme, function (value, key) {
-  const hasUpdatedKey = categories.find((category) => category[key]);
-  let categoryName = key;
-
-  if (hasUpdatedKey) {
-    categoryName = Object.values(hasUpdatedKey)[0];
-    console.log(categoryName);
-  }
-
   switch (key) {
     case "fontFamily":
       // Font family data is in an array, so we use join to
@@ -83,19 +75,35 @@ _.forEach(theme, function (value, key) {
   }
 });
 
+const categories = ["color", "size"];
+
 module.exports = {
-  tokens,
+  // tokens,
+  source: [`./src/_tokens/**/*.json`],
   platforms: {
     css: {
       transformGroup: "css",
       buildPath: "src/css/",
-      files: [
-        {
-          format: "css/variables",
-          destination: "_variables.css",
-          filter: (token) => categories.includes(token.attributes.category),
+      files: categories.map((category) => ({
+        destination: `tokens/_${category}.css`,
+        format: "css/variables",
+        filter: (token) => {
+          if (token.attributes.category === category) {
+            return token.attributes.type !== "base" ? token : null;
+          }
         },
-      ],
+        // options: {
+        //   outputReferences: true,
+        // },
+      })),
+      // Use tailwind config
+      // files: [
+      //   {
+      //     format: "css/variables",
+      //     destination: "_variables.css",
+      //     filter: (token) => categories.includes(token.attributes.category),
+      //   },
+      // ],
     },
   },
 };

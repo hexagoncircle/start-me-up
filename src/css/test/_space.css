@@ -1,0 +1,22 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 17 Jul 2023 02:23:49 GMT
+ */
+
+:root {
+  --color-bg-1: #ffffff;
+  --color-bg-2: #f3f3f3;
+  --color-bg-success: #ff77e9;
+  --color-text-1: #78dcca;
+  --color-text-2: #ecebff;
+  --font-family-sans: system-ui,sans-serif;
+  --font-family-serif: Georgia,serif;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+}
