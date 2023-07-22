@@ -8,7 +8,10 @@ const fs = require("fs-extra");
 
 const tokensPath = "src/_tokens/";
 const buildPath = "src/css/tokens/";
-const categories = ["color", "size"];
+const categories = {
+  default: ["color", "size"],
+  dark: ["color"],
+};
 const modes = ["light", "dark"];
 const transforms = ["attribute/cti", "name/cti/kebab", "sizes/pxToRem"];
 
@@ -32,13 +35,13 @@ StyleDictionary.extend({
       transformGroup: "css",
       transforms,
       buildPath,
-      files: categories.map((category) => {
+      files: categories.default.map((category) => {
         let selector = `:where(html)${
           category === "color" ? ", :where([data-theme])" : ""
         }`;
 
         return {
-          destination: `tokens/_${category}.css`,
+          destination: `_${category}.css`,
           format: "css/variables",
           filter: (token) => token.attributes.category === category,
           options: {
@@ -60,11 +63,11 @@ StyleDictionary.extend({
       transformGroup: "css",
       transforms,
       buildPath,
-      files: categories.map((category) => ({
-        destination: `tokens/_${category}.dark.css`,
+      files: categories.dark.map((category) => ({
+        destination: `_${category}.dark.css`,
         format: "css/variables",
         filter: (token) =>
-          token.filePath.indexOf(`.dark`) > -1 &&
+          token.filePath.indexOf(".dark") > -1 &&
           token.attributes.category === category,
         options: {
           selector: ":where([data-theme='dark'])",

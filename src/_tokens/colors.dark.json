@@ -2,18 +2,18 @@
   "color": {
     "bg": {
       "primary": {
-        "value": "{neutral.100.value}"
-      },
-      "secondary": {
-        "value": "{neutral.200.value}"
-      }
-    },
-    "text": {
-      "primary": {
         "value": "{neutral.900.value}"
       },
       "secondary": {
         "value": "{neutral.800.value}"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{neutral.100.value}"
+      },
+      "secondary": {
+        "value": "{neutral.200.value}"
       }
     }
   }

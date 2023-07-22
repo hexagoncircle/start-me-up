@@ -1,0 +1,11 @@
+/**
+ * Do not edit directly
+ * Generated on Sat, 22 Jul 2023 15:15:50 GMT
+ */
+
+:where([data-theme='dark']) {
+  --color-bg-primary: #1a202c;
+  --color-bg-secondary: #2d3748;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #edf2f7;
+}
