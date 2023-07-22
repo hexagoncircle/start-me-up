@@ -7,7 +7,7 @@
     "build": "eleventy",
     "start": "eleventy --serve",
     "clean": "rm -rf _site",
-    "sd": "style-dictionary build --config ./sd.config.js"
+    "sd": "node ./sd.config.js"
   },
   "keywords": [],
   "author": {

@@ -1,8 +1,9 @@
 {
   "size": {
-    "s": { "value": 0.5 },
-    "m": { "value": "1.0" },
-    "l": { "value": "1.6" },
-    "xl": { "value": "2.4" }
+    "xs": { "value": 4 },
+    "s": { "value": 8 },
+    "m": { "value": 16 },
+    "l": { "value": 24 },
+    "xl": { "value": 32 }
   }
 }

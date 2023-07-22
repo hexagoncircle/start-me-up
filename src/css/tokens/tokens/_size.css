@@ -1,0 +1,12 @@
+/**
+ * Do not edit directly
+ * Generated on Sat, 22 Jul 2023 01:33:39 GMT
+ */
+
+:where(html) {
+  --size-xs: 0.25rem;
+  --size-s: 0.5rem;
+  --size-m: 1rem;
+  --size-l: 1.5rem;
+  --size-xl: 2rem;
+}
